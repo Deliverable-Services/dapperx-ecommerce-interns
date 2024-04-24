@@ -1,46 +1,44 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import ProductCard from "@/components/ProductCard";
-import {category1, category2,dealsData, data, salesData} from "@/data/Homepage.js"
+import {category1, category2,dealsData, data, salesData} from "@/utils/constants.js"
 import { Dot } from "lucide-react";
 import Rating from "@/components/Rating";
-import Carausel from "@/components/Carausel";
+import Carousel from "@/components/Carousel";
 import { useState } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
 
-  const [active, setActive] = useState(0);
-
   return (
-    <div className="flex flex-col w-[100vw] relative">
-        <div className="flex flex-row max-lg:flex-col sm:w-[100%] max-lg:w-[100vw]   gap-6 mt-10 pl-16">
-          <div className="flex flex-col gap-[70px] w-[45%] max-lg:w-[100%] ">
-            <div className=" flex  text-7xl  max-lg:text-4xl  flex-col gap-4 ">
+    <div className="w-screen flex flex-col">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-6 mt-10 px-16 w-[100%]">
+          <div className="flex flex-col gap-[70px] lg:w-[45%] w-[100%] mt-6">
+            <div className=" flex  md:text-7xl text-4xl flex-col gap-4 ">
               <h2 className="font-bold tracking-wide">Your </h2>
-              <p className=" font-bold tracking-wide"><span className="text-[#BA9B88] ">Ultimate </span>Fashion </p>
+              <p className=" font-bold tracking-wide "><span className="text-[#BA9B88] ">Ultimate </span>Fashion </p>
               <p className="font-bold tracking-wide">Destination</p> 
             </div>
               <p className=" text-lg tracking-widest">Discover the latest trends in fashion for men and kids.Explore our curated collection of clothing, shoes, and accessories that blend style and comfort seamlessly</p>
               <button className="text-white  text-md bg-[#141311] w-[160px] h-[50px] mx-auto ">Start Exploring</button>
-              <div className="flex flex-col gap-5 max-lg:items-center max-lg:justify-center  ">
+              <div className="flex flex-col gap-5">
                 <h3 className="text-md font-bold">Recent Trends</h3>
-                <div className="">
+                <div className=" ">
                     <ProductCard data={data}/> 
                 </div>
               </div>
           </div>
-          <Image width={450} height={300} alt="main" src={"/mens-clothes.jpg"} className="w-[50%] h-[100%] max-lg:hidden pr-4"/>
+          <Image width={450} height={300} alt="main" src={"/mens-clothes.jpg"} className="w-[55%] lg:flex hidden h-[870px]  mt-6"/>
         </div>
       {/* section 2 */}
-        <div className="bg-white mt-10 flex flex-col place-items-center justify-center w-full">
+        <div className="bg-white mt-10 flex flex-col items-center justify-center w-full">
 
 
-          <div className="flex flex-row max-lg:grid max-lg:grid-cols-2 max-lg:grid-rows-2 items-center justify-evenly gap-40 py-16">
+          <div className="flex flex-row items-center justify-evenly  lg:gap-40 gap-16 py-16">
               {
                 salesData.map((item) => {
-                  return <div key={item.id} className="flex flex-row gap-4 max-lg:flex-col items-center justify-center">
+                  return <div key={item.id} className="flex flex-row gap-4  items-center justify-center">
                     
                       {item.iconName}
                     
@@ -53,7 +51,7 @@ export default function Home() {
               }
             </div>
 
-            <div className="flex flex-row gap-10 w-[100%] h-[100%]">
+            {/* <div className="flex flex-row gap-10 w-[100%] h-[100%]">
 
             <div className="flex flex-col gap-10  w-[50%]">
               {
@@ -71,7 +69,7 @@ export default function Home() {
                 }) 
                 
               } 
-            </div>
+            </div> */}
 
             {/* <div className="grid grid-rows-2 grid-cols-1 gap-10 ">
             {
@@ -89,10 +87,10 @@ export default function Home() {
               }) 
 
             } 
-            </div> */}
+            </div> 
 
-          </div>
-            <div className="bg-[#EDEEF1] flex flex-row text-3xl px-3 py-8 font-semibold items-center justify-evenly w-full my-10">
+          </div> */}
+            {/* <div className="bg-[#EDEEF1] flex flex-row text-3xl px-3 py-8 font-semibold items-center justify-evenly w-full my-10">
               <p >SHORTS AND TRACKSUITS </p>
               <span><Dot size={56} strokeWidth={3} /></span>
               <p >SUNGLASSES </p>
@@ -105,14 +103,14 @@ export default function Home() {
 
             <div className="text-4xl font-bold tracking-wide mb-10">
               SHOP BY CATEGORY
-            </div>
+            </div> */}
 
 
-            <div>
+            {/* <div>
               <Carausel/>
-            </div>
+            </div> */}
 
-            <div className="bg-[#EDEEF1] w-full flex flex-col items-center justify-center py-10">
+            {/* <div className="bg-[#EDEEF1] w-full flex flex-col items-center justify-center py-10">
               <p className="text-4xl font-bold mb-10">DEALS OF THE DAY</p>
               <div className="flex flex-row items-center gap-32">
                 {
@@ -138,7 +136,7 @@ export default function Home() {
                   })
                 }
               </div>
-            </div>
+            </div> */}
         </div>
       {/* section 3 */}
         <div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {crauselData} from '@/data/Homepage.js'
+import {crauselData} from '@/utils/constants.js'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 const Carausel = () => {
@@ -10,14 +10,12 @@ const Carausel = () => {
     setCurrIndex((prev) => 
       prev - 1 < 0 ? crauselData.length-1 : prev-1
     );
-    console.log(currIndex)
   };
 
   const handleRight = () => {
     setCurrIndex((prev) => 
       prev + 1 === crauselData.length ? 0 : prev+1
     );
-    console.log(currIndex);
   };
 
   return (

@@ -1,10 +1,10 @@
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar/Navbar";
 import "@/styles/globals.css";
 import Footer from "@/components/Footer";
 export default function App({ Component, pageProps }) {
-  return <div className="bg-[#EDEEF1]">
+  return <div className="w-full">
     <Navbar/>
-    <Component {...pageProps} />
+    <Component {...pageProps}/>
     <Footer/>
     </div>;
 }
