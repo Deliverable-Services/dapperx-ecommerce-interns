@@ -1,34 +1,38 @@
 import React from 'react'
-import { CiStar, CiStarFilled, CiHeart } from "react-icons/ci";
+import { CiHeart } from "react-icons/ci";
 import { IndianRupee } from 'lucide-react';
 import Image from 'next/image';
 import Rating from './Rating';
-const ProductCard = ({data}) => {
+const ProductCard = ({HERO_SECTION_PRODUCTS}) => {
   return (
-    <div className='flex flex-row gap-10'>
+    <div className='flex sm:flex-row flex-col gap-10 items-center justify-center sm:justify-start'>
         {
-            data.map((product) => {
-                return <div key={product.id} className='bg-white py-4 px-2 gap-3 flex flex-col items-center justify-center min-w-[220px] rounded-lg'>
-                    <Image src={product.imgUrl} alt='product' width={180} height={100} className='flex object-fill'/>
-                    <div className='flex flex-row items-center justify-between'>
-                        <div className='flex flex-col gap-2'>
+            HERO_SECTION_PRODUCTS.map((product) => {
+                return <div key={product.id} className='bg-white gap-3 flex flex-col items-center  w-[220px] h-[220px]  shadow-lg shadow-gray-600'>
+
+                    <Image src={product.imgUrl} alt='product' width={180} height={100} className='flex object-cover mt-4'/>
+                    <div className='flex flex-col w-full px-5'>
+                        <div className='flex flex-row items-center justify-between'>
                             <h1 className='text-grey text-[10px] font-semibold'>{product.BrandName}</h1>
-                            <p className='font-bold text-[13px] '>{product.name}</p>
-                            <div className='flex flex-row fill-yellow-500'>
-                                
+                            <div className=''><CiHeart/></div>
+                           
+                        </div>
+                        <div>
+                        <p className='font-bold text-[13px] '>{product.name}</p>
+                        </div>
+                        <div className='flex flex-row items-center justify-between '>
+                           
+                             <div className='flex flex-row fill-yellow-500 h-2 w-9 items-center '>   
                             {[...Array(5)].map((_, i) => (
-                                // <CiStar key={i} className=' fill-yellow-500 '/>
                                 <Rating key={i}/>
                             ))}
                             </div>
-                        </div>
-                        <div className='flex flex-col gap-5 items-end'>
-                            <div className=''><CiHeart/></div>
-                            <div className='flex flex-row items-center justify-center'>
-                                <IndianRupee className='size-3 font-semibold mt-1'/>
-                                <p className='size-4 font-semibold'>
+                            <div className='flex flex-row items-center justify-center  '>
+                                
+                                <IndianRupee size={11}/>
+                                <h2 className='text-sm font-semibold'>
                                     {product.price}
-                                </p>
+                                </h2>
                             </div>
                         </div>
                     </div>
