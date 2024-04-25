@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {crauselData} from '@/utils/constants.js'
+import {PRODUCTS_CATEGORIES} from '@/utils/constants.js'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 const Carausel = () => {
@@ -8,13 +8,13 @@ const Carausel = () => {
 
   const handleLeft = () => {
     setCurrIndex((prev) => 
-      prev - 1 < 0 ? crauselData.length-1 : prev-1
+      prev - 1 < 0 ? PRODUCTS_CATEGORIES.length-1 : prev-1
     );
   };
 
   const handleRight = () => {
     setCurrIndex((prev) => 
-      prev + 1 === crauselData.length ? 0 : prev+1
+      prev + 1 === PRODUCTS_CATEGORIES.length ? 0 : prev+1
     );
   };
 
@@ -22,7 +22,7 @@ const Carausel = () => {
     <div className='flex relative items-center justify-center'>
     <div className='flex flex-row justify-center items-center gap-10 py-8'>
       {
-        crauselData.map((item,id)=>{
+        PRODUCTS_CATEGORIES.map((item,id)=>{
           return(
             <div  key={id} className={`${currIndex === id || currIndex === id-1 || currIndex === id-2  ? "flex flex-col items-center justify-center gap-5  ": "hidden"}`}>
                 <Image src={item.imageUrl} width={200} height={200} alt='crausel' className='w-[300px] h-[300px] mix-blend-multiply'/>
