@@ -9,6 +9,9 @@ module.exports = {
     extend: {
       colors: {
         'slate' : '#EDEEF1'
+      },
+      fontFamily:{
+        'dscript' : '"Dancing Script"',
       }
     },
   },

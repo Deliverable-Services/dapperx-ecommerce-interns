@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import ProductCard from "@/components/ProductCard";
-import {category1, category2,dealsData, data, salesData} from "@/utils/constants.js"
+import {category1, category2,DEALS, HERO_SECTION_PRODUCTS, SERVICE_DETAILS} from "@/utils/constants.js"
 import { Dot } from "lucide-react";
 import Rating from "@/components/Rating";
 import Carousel from "@/components/Carousel";
@@ -25,23 +25,24 @@ export default function Home() {
               <div className="flex flex-col gap-5">
                 <h3 className="text-md font-bold">Recent Trends</h3>
                 <div className=" ">
-                    <ProductCard data={data}/> 
+                    <ProductCard HERO_SECTION_PRODUCTS={HERO_SECTION_PRODUCTS}/>
                 </div>
               </div>
           </div>
           <Image width={450} height={300} alt="main" src={"/mens-clothes.jpg"} className="w-[55%] lg:flex hidden h-[870px]  mt-6"/>
         </div>
       {/* section 2 */}
-        <div className="bg-white mt-10 flex flex-col items-center justify-center w-full">
+        <div className="bg-white mt-10 flex flex-col items-center px-2 justify-center w-full">
 
 
-          <div className="flex flex-row items-center justify-evenly  lg:gap-40 gap-16 py-16">
+          <div className="md:flex flex-row grid grid-cols-2 grid-rows-2 items-center justify-evenly  lg:gap-40 gap-16 py-16">
               {
-                salesData.map((item) => {
-                  return <div key={item.id} className="flex flex-row gap-4  items-center justify-center">
-                    
+                SERVICE_DETAILS.map((item) => {
+                  return <div key={item.id} className="flex flex-row  gap-4  items-center justify-center">
+                    <div>
+
                       {item.iconName}
-                    
+                    </div>
                       <span>
                         <h3 className="text-xl font-bold">{item.title}</h3>
                         <p>{item.details}</p>

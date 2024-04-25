@@ -1,5 +1,5 @@
-import { Truck,Receipt, Headset, WalletCards   } from "lucide-react";
-export const data = [
+import { Truck,Receipt, Headset, WalletCards, Home,CircleUserRound ,Rss, Handshake,BaggageClaim, ArrowUpNarrowWide,Heart   } from "lucide-react";
+export const HERO_SECTION_PRODUCTS = [
     {
         id: 1,
         imgUrl : "/nike2.jpg",
@@ -16,7 +16,7 @@ export const data = [
     }
 ];
 
-export const salesData = [
+export const SERVICE_DETAILS = [
     {
       id: 1,
       iconName:<Truck className="size-8"/>,
@@ -79,7 +79,7 @@ export const salesData = [
   }
   ];
 
-  export const crauselData = [
+  export const PRODUCTS_CATEGORIES = [
     {
       id:1,
       imageUrl: '/crausel/accessory-crausel.avif',
@@ -113,7 +113,7 @@ export const salesData = [
   ];
 
 
-  export const dealsData = [
+  export const DEALS = [
     {
       id:1,
       imageUrl: '/deals/combo-tshirt.avif',
@@ -134,6 +134,50 @@ export const salesData = [
       name:"Premium Jacket",
       price: 1500,
       btnIcon: "+",
+    }
+  ];
+  export const SIDEBAR_LINKS = [
+    {
+      id:1,
+      title:'Home',
+      icon: <Home  className='size-4'/>,
+      path: '/',
+    },
+    {
+      id:2,
+      title:'My Profile',
+      icon: <CircleUserRound  className='size-4'/>,
+      path: '/profile',
+    },
+    {
+      id:3,
+      title:'Cart',
+      icon: <BaggageClaim  className='size-4'/>,
+      path: '/cart',
+    },
+    {
+      id:4,
+      title:'My Wishlish',
+      icon: <Heart  className='size-4'/>,
+      path: '/liked-products',
+    },
+    {
+      id:5,
+      title:'Collections',
+      icon: <ArrowUpNarrowWide  className='size-4'/>,
+      path: '/collection',
+    },
+    {
+      id:6,
+      title:'Deals',
+      icon: <Handshake  className='size-4'/>,
+      path: '/deals',
+    },
+    {
+      id:7,
+      title:'Blogs',
+      icon: <Rss  className='size-4'/>,
+      path: '/blogs',
     }
   ];
 

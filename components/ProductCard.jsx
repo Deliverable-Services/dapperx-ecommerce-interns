@@ -3,11 +3,11 @@ import { CiHeart } from "react-icons/ci";
 import { IndianRupee } from 'lucide-react';
 import Image from 'next/image';
 import Rating from './Rating';
-const ProductCard = ({data}) => {
+const ProductCard = ({HERO_SECTION_PRODUCTS}) => {
   return (
     <div className='flex sm:flex-row flex-col gap-10 items-center justify-center sm:justify-start'>
         {
-            data.map((product) => {
+            HERO_SECTION_PRODUCTS.map((product) => {
                 return <div key={product.id} className='bg-white gap-3 flex flex-col items-center  w-[220px] h-[220px]  shadow-lg shadow-gray-600'>
 
                     <Image src={product.imgUrl} alt='product' width={180} height={100} className='flex object-cover mt-4'/>
