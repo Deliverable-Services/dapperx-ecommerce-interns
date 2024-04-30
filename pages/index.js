@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="">
       {/* section 1 */}
-        {/* <div className="flex flex-row gap-6 mt-10 pl-16">
+         <div className="flex flex-row gap-6 mt-10 pl-16">
           <div className="flex flex-col gap-[70px] w-[45%] ">
             <div className=" flex flex-col gap-4">
               <h2 className=" text-7xl font-bold tracking-wide">Your </h2>
@@ -36,9 +36,9 @@ export default function Home() {
               </div>
           </div>
           <Image width={450} height={300} alt="main" src={"/mens-clothes.jpg"} className="w-[50%] pr-4"/>
-        </div> */}
+        </div>
       {/* section 2 */}
-        {/* <div className="bg-white mt-10">
+         <div className="bg-white mt-10">
             <div className="flex flex-row items-center justify-evenly py-16">
               {
                 salesData.map((item) => {
@@ -54,7 +54,7 @@ export default function Home() {
                 })
               }
             </div>
-        </div> */}
+        </div>
       {/* section 3 */}
       <ProductPage/>
       {/* section 4 */}
