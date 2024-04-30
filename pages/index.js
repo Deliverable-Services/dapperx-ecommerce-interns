@@ -140,9 +140,7 @@ export default function Home() {
             </div> */}
         </div>
       {/* section 3 */}
-        <div>
-
-        </div>
+      <ProductPage/>
       {/* section 4 */}
         <div>
 
