@@ -4,7 +4,7 @@ import { IndianRupee } from 'lucide-react';
 import Image from 'next/image';
 import Rating from './Rating';
 const ProductCard = ({data}) => {
-  return (
+      return (
     <div className='flex flex-row gap-10'>
         {
             data.map((product) => {

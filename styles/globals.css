@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+#range-slider .range-slider__range {
+    background-color: #cea017;
+  }
+
+  #range-slider .range-slider__thumb {
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: #faa307;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
+    transition: transform .3s;
+  }
