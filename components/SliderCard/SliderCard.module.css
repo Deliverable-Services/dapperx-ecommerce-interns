@@ -1,0 +1,13 @@
+
+.slick-slide>div {
+    margin: 0 10px;
+  }
+.slick-list {
+    margin: 0 -10px;
+  }
+  .slick{
+    width: full;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }

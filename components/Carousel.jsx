@@ -1,47 +1,106 @@
-import React, { useState } from 'react'
-import {PRODUCTS_CATEGORIES} from '@/utils/constants.js'
-import Image from 'next/image'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import React, { useState } from "react";
+import { ChevronRight, ChevronLeft } from "lucide-react";
+import { PRODUCTS_CATEGORIES } from "@/utils/constants.js";
+import Image from "next/image";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 const Carausel = () => {
+  const PrevArrow = ({ currentSlide, slideCount, ...props }) => {
+    const { onClick } = props;
 
-  const [currIndex, setCurrIndex] = useState(0);
-
-  const handleLeft = () => {
-    setCurrIndex((prev) => 
-      prev - 1 < 0 ? PRODUCTS_CATEGORIES.length-1 : prev-1
+    return (
+      <div
+        {...props}
+        className="bg-white h-[30px] w-[30px] text-black rounded-full cursor-pointer top-[40%] z-20 left-10 absolute"
+        onClick={onClick}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <ChevronLeft className="size-4" />
+      </div>
+    );
+  };
+  const NextArrow = ({ currentSlide, slideCount, ...props }) => {
+    const { onClick } = props;
+    return (
+      <div
+        {...props}
+        className="bg-white h-[30px] w-[30px] text-black rounded-full cursor-pointer top-[40%] right-10 absolute"
+        onClick={onClick}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <ChevronRight size={20} />
+      </div>
     );
   };
 
-  const handleRight = () => {
-    setCurrIndex((prev) => 
-      prev + 1 === PRODUCTS_CATEGORIES.length ? 0 : prev+1
-    );
-  };
-
-  return (
-    <div className='flex relative items-center justify-center'>
-    <div className='flex flex-row justify-center items-center gap-10 py-8'>
+  var settings = {
+    centerMode: true,
+    infinite: true,
+    centerPadding: "50px",
+    slidesToShow: 4,
+    speed: 1000,
+    rows: 1,
+    autoplay: true,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
       {
-        PRODUCTS_CATEGORIES.map((item,id)=>{
-          return(
-            <div  key={id} className={`${currIndex === id || currIndex === id-1 || currIndex === id-2  ? "flex flex-col items-center justify-center gap-5  ": "hidden"}`}>
-                <Image src={item.imageUrl} width={200} height={200} alt='crausel' className='w-[300px] h-[300px] mix-blend-multiply'/>
-                <h2 className='text-xl font-bold flex items-center justify-center  px-10 py-4'>{item.category}</h2>
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          // infinite: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+  return (
+    <div className="slider-container w-full">
+      <Slider {...settings}>
+        {PRODUCTS_CATEGORIES.map((item) => {
+          return (
+            <div key={item.id} className="flex flex-col w-[100%] ">
+              <div className="flex items-center justify-center">
+                <Image
+                  src={item.imageUrl}
+                  width={1200}
+                  height={1200}
+                  alt="carousel"
+                  className="md:w-[250px] md:h-[280px] w-[120px] h-[150px] "
+                />
+              </div>
+              <h2 className="md:text-xl text-md font-bold flex flex-row items-center justify-center my-8 ">
+                {item.category}
+              </h2>
             </div>
-          )
-        })
-      }            
-    </div>  
-    <div className='absolute  opacity-75 gap-[60rem] flex flex-row'>
-      <button className='bg-[#EDEEF2] rounded-full flex items-center justify-center size-8 ' onClick={handleLeft}>
-        <ChevronLeft className='size-4 text-black'/>
-      </button>
-      <button className='bg-[#EDEEF2] rounded-full flex items-center justify-center size-8' onClick={handleRight}>
-        <ChevronRight className='size-4 text-black'/>  
-      </button>
+          );
+        })}
+      </Slider>
     </div>
-  </div>
-  )
-}
-
-export default Carausel
+  );
+};
+export default Carausel;

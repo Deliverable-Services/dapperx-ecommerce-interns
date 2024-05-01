@@ -10,7 +10,7 @@ const ProductCard = ({HERO_SECTION_PRODUCTS}) => {
             HERO_SECTION_PRODUCTS.map((product) => {
                 return <div key={product.id} className='bg-white gap-3 flex flex-col items-center  w-[220px] h-[220px]  shadow-lg shadow-gray-600'>
 
-                    <Image src={product.imgUrl} alt='product' width={180} height={100} className='flex object-cover mt-4'/>
+                    <Image src={product.imgUrl} alt='product' width={180} height={100} className='flex w-auto h-auto aspect-square object-cover mt-4'/>
                     <div className='flex flex-col w-full px-5'>
                         <div className='flex flex-row items-center justify-between'>
                             <h1 className='text-grey text-[10px] font-semibold'>{product.BrandName}</h1>

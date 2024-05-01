@@ -14,16 +14,9 @@ const Sidebar = ({ isSidebarVisible, handleSidebarVisibility }) => {
           onClick={handleSidebarVisibility}
         />
       </button>
-      {/* <Link href={'/'} className={Styles.sidebar}><Home/> Home</Link>
-      <Link href={'/profile'} className={Styles.sidebar}> <CircleUserRound className='size-4'/>My Profile</Link>
-      <Link href={'/cart'} className={Styles.sidebar}><BaggageClaim className='size-4'/>Cart</Link>
-      <Link href={'/liked-products'} className={Styles.sidebar}><Heart className='size-4'/>My wishlist</Link>
-      <Link href={'/collections'} className={Styles.sidebar}> <ArrowUpNarrowWide className='size-4'/>Collection</Link>
-      <Link href={'/deals'} className={Styles.sidebar}> <Handshake className='size-4'/>Deals</Link>
-      <Link href={'/blogs'} className={Styles.sidebar}  > <Rss className='size-4'/>Blogs</Link> */}
       {SIDEBAR_LINKS.map((link) => {
         return (
-          <Link href={link.path} className={Styles.sidebar}>
+          <Link href={link.path} className={Styles.sidebar} key={link.id}>
             {link.icon}
             {link.title}
           </Link>
