@@ -2,22 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 *, *::after, *::before{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-=======
-#range-slider .range-slider__range {
-    background-color: #cea017;
-  }
-
-  #range-slider .range-slider__thumb {
-    width: 1.6rem;
-    height: 1.6rem;
-    background-color: #faa307;
-    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
-    transition: transform .3s;
-  }
->>>>>>> c40c4de (Product component)

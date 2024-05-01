@@ -6,16 +6,16 @@ import { FaRegHeart } from "react-icons/fa";
 const ItemDesc = () => {
   return (
     <div className='flex px-4 flex-col sm:flex sm:flex-row'>
-      <div className='w-1/5 flex justify-center items-center sm:flex sm:flex-col '>
-        <Image className='h-[90px] w-[120px] mx-8' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
-        <Image className='h-[90px] w-[120px] mx-8 sm:my-[14px]' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
-        <Image className='h-[90px] w-[120px] mx-8 sm:my-[14px]' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
-        <Image className='h-[90px] w-[120px] mx-8' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
+      <div className='w-full overflow-hidden sm:w-1/5 flex justify-center items-center sm:flex sm:flex-col '>
+        <Image className='h-[90px] w-[120px] mx-2' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
+        <Image className='h-[90px] w-[120px] mx-2 sm:my-[14px]' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
+        <Image className='h-[90px] w-[120px] mx-2 sm:my-[14px]' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
+        <Image className='h-[90px] w-[120px] mx-2' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
       </div>
-      <div className='w-2/5'>
+      <div className='w-full p-2.5 sm:p-0 sm:w-2/5'>
         <Image className='w-full h-[417px]' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
       </div>
-    <div className='w-2/5 h-full px-6'>
+    <div className='w-full sm:w-2/5 h-full px-6'>
         <div className='w-full flex justify-between'>
             <div><span className='font-bold text-[22px]'>Mens t-shirt</span></div>
             <div>
@@ -37,7 +37,7 @@ const ItemDesc = () => {
             Illo hic aspernatur earum quibusdam non neque sunt nesciunt porro laudantium.
         </p>
         <p className='overflow-hidden font-medium py-1'>Select Colors</p>
-        <div className='flex justify-between w-2/3'>
+        <div className='flex justify-between w-full  sm:w-2/3'>
             <div className='w-12 h-12 bg-red-400 rounded-sm'></div>
             <div className='w-12 h-12 bg-black rounded-sm'></div>
             <div className='w-12 h-12 bg-[#C3B9AD] rounded-sm'></div>

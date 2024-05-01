@@ -6,7 +6,8 @@ import { Dot } from "lucide-react";
 import Rating from "@/components/Rating";
 import Carousel from "@/components/Carousel";
 import { useState } from "react";
-
+import ProductPage from "@/components/ProductPage";
+import ProductDesc from "@/components/Product Description/ProductDesc";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {

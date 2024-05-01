@@ -14,7 +14,7 @@ const ProductDesc = () => {
       <div className='pt-6'>
         <ItemDesc/>
       </div>
-      <div className='grid grid-cols-4 pl-[72px]'>
+      <div className='grid grid-cols-2 sm:grid sm:grid-cols-4 sm:pl-[72px]'>
         <DescriptionCard/>
         <DescriptionCard/>
         <DescriptionCard/>

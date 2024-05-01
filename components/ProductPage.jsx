@@ -35,7 +35,7 @@ const ProductPage = () => {
    };
 
   return (
-    <div>
+    <div className='overflow-hidden'>
       <div className= {isFilter ? 'flex px-8 pt-3 sm:p-6 justify-between p-4' : 'flex justify-between px-3 pt-2'}>
         <span className='font-bold sm:hidden' onClick={handlFilter}>Filter</span>
         <span className='font-bold hidden sm:block'>Filter</span>
