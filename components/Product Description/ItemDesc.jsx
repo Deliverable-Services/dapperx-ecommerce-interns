@@ -6,13 +6,13 @@ import { FaRegHeart } from "react-icons/fa";
 const ItemDesc = () => {
   return (
     <div className='flex px-4 flex-col sm:flex sm:flex-row'>
-      <div className='w-full overflow-hidden sm:w-1/5 flex justify-center items-center sm:flex sm:flex-col '>
+      <div className='w-full overflow-hidden sm:w-1/5 flex justify-center sm:flex sm:flex-col '>
         <Image className='h-[90px] w-[120px] mx-2' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
         <Image className='h-[90px] w-[120px] mx-2 sm:my-[14px]' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
         <Image className='h-[90px] w-[120px] mx-2 sm:my-[14px]' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
         <Image className='h-[90px] w-[120px] mx-2' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
       </div>
-      <div className='w-full p-2.5 sm:p-0 sm:w-2/5'>
+      <div className='w-full p-2.5 sm:p-0 sm:w-2/5 sm:items-center sm:flex sm:justify-center sm:-ml-24'>
         <Image className='w-full h-[417px]' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
       </div>
     <div className='w-full sm:w-2/5 h-full px-6'>

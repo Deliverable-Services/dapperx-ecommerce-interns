@@ -7,8 +7,8 @@ const DescriptionCard = () => {
     <div className='m-4'>
       <div className='relative'>
       <Image className='w-[240px] h-[280px]px]' src={'/mens-clothes.jpg'} height={300} width={300} alt='cloth'/>
-      <button className='bg-white absolute right-[65px]  top-2' ><FaRegHeart /></button>
-      <button className='bg-white absolute right-[65px]  bottom-2' ><MdOutlineShoppingBag /></button>
+      <button className='bg-white absolute right-[6px] sm:right-[80px]  top-2' ><FaRegHeart /></button>
+      <button className='bg-white absolute right-[6px] sm:right-[80px]  bottom-2' ><MdOutlineShoppingBag /></button>
       </div>
       <p className='font-semibold'>Cotton T shirt</p>
       <div className='flex justify-between overflow-hidden'>

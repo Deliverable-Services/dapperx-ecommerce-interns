@@ -8,6 +8,8 @@ import Carousel from "@/components/Carousel";
 import { useState } from "react";
 import ProductPage from "@/components/ProductPage";
 import ProductDesc from "@/components/Product Description/ProductDesc";
+import Summary from "@/components/Cart Section/Summary";
+import Cart from "@/components/Cart Section/Cart";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -144,10 +146,7 @@ export default function Home() {
       <ProductPage/>
       {/* section 4 */}
       <ProductDesc/>
-        <div>
-
-        </div>
-    
+      <Cart/>    
     </div>
   );
 }

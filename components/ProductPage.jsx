@@ -178,7 +178,7 @@ const ProductPage = () => {
               </div>
           </div>
         </div>
-        {isFilter ? 
+        {isFilter ? (<FilterSection/>) :
         (<div 
           className= 'grid grid-cols-2 sm:grid sm:grid-cols-3 w-full p-4'>
           <ClothCard/>
@@ -193,7 +193,7 @@ const ProductPage = () => {
           <ClothCard/>
           <ClothCard/>
           <ClothCard/>
-        </div>) : (<FilterSection/>)} 
+        </div>) } 
       </div>
     </div>
   )
