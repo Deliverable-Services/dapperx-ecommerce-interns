@@ -1,79 +1,79 @@
-import Logo from "@/components/Logo";
-import { Truck, Receipt, Headset, WalletCards, Home, CircleUserRound, Rss, Handshake, BaggageClaim, ArrowUpNarrowWide, Heart, Dot, Instagram, Twitter, Linkedin, Facebook } from "lucide-react";
+import { Truck, Receipt, Headset, WalletCards, Home, CircleUserRound, Rss, Handshake, BaggageClaim, ArrowUpNarrowWide, Heart, Dot, Instagram, Twitter, Linkedin, Facebook } from 'lucide-react';
+
 export const HERO_SECTION_PRODUCTS = [
   {
     id: 1,
-    imgUrl: "/nike2.jpg",
-    BrandName: "Nike",
+    imgUrl: '/nike2.jpg',
+    BrandName: 'Nike',
     price: 2500,
-    name: "Nike Running Shoes"
+    name: 'Nike Running Shoes'
   },
   {
     id: 2,
-    imgUrl: "/apple.jpg",
-    BrandName: "Apple",
+    imgUrl: '/apple.jpg',
+    BrandName: 'Apple',
     price: 30000,
-    name: "Greed Smart Watch"
+    name: 'Greed Smart Watch'
   }
 ];
 
 export const SERVICE_DETAILS = [
   {
     id: 1,
-    iconName: <Truck className="sm:size-12" />,
-    title: "Free Shipping",
-    details: "Avove all Orders over ₹ 200"
+    iconName: <Truck className='sm:size-12' />,
+    title: 'Free Shipping',
+    details: 'Avove all Orders over ₹ 200'
   },
   {
     id: 2,
-    iconName: <Receipt className="sm:size-12" />,
-    title: "Money Guarantee",
-    details: "30 Days For Exchange"
+    iconName: <Receipt className='sm:size-12' />,
+    title: 'Money Guarantee',
+    details: '30 Days For Exchange'
   },
   {
     id: 3,
-    iconName: <Headset className="sm:size-12" />,
-    title: "Online Support",
-    details: "24/7 customer Care"
+    iconName: <Headset className='sm:size-12' />,
+    title: 'Online Support',
+    details: '24/7 customer Care'
   },
   {
     id: 4,
-    iconName: <WalletCards className="sm:size-12" />,
-    title: "Flexible payment",
-    details: "Pay with multiple credit card"
+    iconName: <WalletCards className='sm:size-12' />,
+    title: 'Flexible payment',
+    details: 'Pay with multiple credit card'
   }
 ];
 
 export const CATEGORIES_DETAILS = [
   {
     id: 1,
-    category: "Men's",
-    buttonText: "Shop Now",
-    text: "Collection",
-    offer: "sale 30% Off",
-    bgimage: "/men suit.jpg"
+    category: 'Men\'s',
+    buttonText: 'Shop Now',
+    text: 'Collection',
+    offer: 'sale 30% Off',
+    bgimage: '/men suit.jpg'
   },
   {
     id: 3,
-    category: "Women's",
-    buttonText: "Shop Now",
-    text: "Collection",
-    offer: "Limited Offers",
-    bgimage: "/girl-jacket.jpg"
+    category: 'Women\'s',
+    buttonText: 'Shop Now',
+    text: 'Collection',
+    offer: 'Limited Offers',
+    bgimage: '/girl-jacket.jpg'
   },
   {
     id: 2,
-    category: "Accessories",
-    buttonText: "Shop Now",
-    text: "Branded Accessories",
-    bgimage: "/accesserios-image.webp"
+    category: 'Accessories',
+    buttonText: 'Shop Now',
+    text: 'Branded Accessories',
+    bgimage: '/accesserios-image.webp'
   },
   {
     id: 4,
-    category: "Shoes",
-    buttonText: "Shop Now",
-    text: "Branded Shoes",
-    bgimage: "/mens-shoes.jpg"
+    category: 'Shoes',
+    buttonText: 'Shop Now',
+    text: 'Branded Shoes',
+    bgimage: '/mens-shoes.jpg'
   },
 ];
 
@@ -81,32 +81,32 @@ export const PRODUCTS_CATEGORIES = [
   {
     id: 1,
     imageUrl: '/carousel/accessory-carousel.avif',
-    category: "Accessories",
+    category: 'Accessories',
   },
   {
     id: 2,
     imageUrl: '/carousel/belt-carousel.avif',
-    category: "Belt",
+    category: 'Belt',
   },
   {
     id: 3,
     imageUrl: '/carousel/shirt-carousel.avif',
-    category: "Active",
+    category: 'Active',
   },
   {
     id: 4,
     imageUrl: '/carousel/women-carousel.avif',
-    category: "Women",
+    category: 'Women',
   },
   {
     id: 5,
     imageUrl: '/carousel/watch-carousel.avif',
-    category: "Watch",
+    category: 'Watch',
   },
   {
     id: 6,
     imageUrl: '/carousel/mens-carousel.avif',
-    category: "Men",
+    category: 'Men',
   }
 ];
 
@@ -160,22 +160,22 @@ export const MARQUEE_DETAILS = [
 
   {
     id: 1,
-    title: "SHORTS AND TRACKSUITS",
+    title: 'SHORTS AND TRACKSUITS',
     icon: <Dot size={56} strokeWidth={3} />
   },
   {
     id: 2,
-    title: "SUNGLASSES",
+    title: 'SUNGLASSES',
     icon: <Dot size={56} strokeWidth={3} />
   },
   {
     id: 3,
-    title: "30% OFF ON FRAGRANCES",
+    title: '30% OFF ON FRAGRANCES',
     icon: <Dot size={56} strokeWidth={3} />
   },
   {
     id: 4,
-    title: "FORMAL WEARS",
+    title: 'FORMAL WEARS',
     icon: <Dot size={56} strokeWidth={3} />
   }
 
@@ -185,70 +185,70 @@ export const SLIDER_CARD_DETAILS = [
   {
     id: 1,
     imageUrl: '/deals/combo-tshirt.avif',
-    text: "Combo T-Shirt",
+    text: 'Combo T-Shirt',
     price: 750,
-    btnIcon: "+",
+    btnIcon: '+',
   },
   {
     id: 2,
     imageUrl: '/deals/girl-tshirt.avif',
-    text: "Premium Tshirt",
+    text: 'Premium Tshirt',
     price: 1000,
-    btnIcon: "+",
+    btnIcon: '+',
   },
   {
     id: 3,
     imageUrl: '/deals/jacket.avif',
-    text: "Premium Jacket",
+    text: 'Premium Jacket',
     price: 1500,
-    btnIcon: "+",
+    btnIcon: '+',
   }
 ];
 
 export const BLAZER_IMAGES = [
   {
     id: 1,
-    imageUrl: "/carousel/coat1.avif",
+    imageUrl: '/carousel/coat1.avif',
   },
   {
     id: 2,
-    imageUrl: "/carousel/coat2.avif",
+    imageUrl: '/carousel/coat2.avif',
   },
   {
     id: 3,
-    imageUrl: "/carousel/coat3.avif",
+    imageUrl: '/carousel/coat3.avif',
   },
   {
     id: 4,
-    imageUrl: "/carousel/coat3.avif",
+    imageUrl: '/carousel/coat3.avif',
   },
   {
     id: 5,
-    imageUrl: "/carousel/coat2.avif",
+    imageUrl: '/carousel/coat2.avif',
   },
   {
     id: 6,
-    imageUrl: "/carousel/coat1.avif",
+    imageUrl: '/carousel/coat1.avif',
   },
   {
     id: 7,
-    imageUrl: "/carousel/coat2.avif",
+    imageUrl: '/carousel/coat2.avif',
   }
 ]
 export const FEATURED_PRODUCTS = [
   {
     id: 1,
-    title: "40%OFF GOING ON",
+    title: '40%OFF GOING ON',
     icon: <Dot size={56} strokeWidth={3} />
   },
   {
     id: 2,
-    title: "OCCASIONAL KING",
+    title: 'OCCASIONAL KING',
     icon: <Dot size={56} strokeWidth={3} />
   },
   {
     id: 3,
-    title: "ONLY MAKE SENSE",
+    title: 'ONLY MAKE SENSE',
     icon: <Dot size={56} strokeWidth={3} />
   }
 ]
@@ -256,21 +256,21 @@ export const FEATURED_PRODUCTS = [
 export const REVIEWS_SECTION_DETAILS = [
   {
     id: 1,
-    name: "Sahil Gupta",
-    imgUrl: "/carousel/mens-carousel.avif",
-    review: `The dress i bought from DapperX was perfect! superb quality and fit. Received countless compliments.Definatly shopping here again!"`
+    name: 'Sahil Gupta',
+    imgUrl: '/carousel/mens-carousel.avif',
+    review: 'The dress i bought from DapperX was perfect! superb quality and fit. Received countless compliments.Definatly shopping here again!\''
   },
   {
     id: 2,
-    name: "Anuj Tiwari",
-    imgUrl: "/girl-jacket.jpg",
-    review: `DapperX never disappoints! impressive veriety and sizes. Fantastic customer service. Highly recommended!"`
+    name: 'Anuj Tiwari',
+    imgUrl: '/girl-jacket.jpg',
+    review: 'DapperX never disappoints! impressive veriety and sizes. Fantastic customer service. Highly recommended!\''
   },
   {
     id: 3,
-    name: "Aniket Gupta",
-    imgUrl: "/men suit.jpg",
-    review: `DapperX offers trendy styles at resonable prices. impressed with quality and value. A must visit for fashion forward shoppers!"`
+    name: 'Aniket Gupta',
+    imgUrl: '/men suit.jpg',
+    review: 'DapperX offers trendy styles at resonable prices. impressed with quality and value. A must visit for fashion forward shoppers!\''
   },
 
 ]
@@ -278,94 +278,94 @@ export const REVIEWS_SECTION_DETAILS = [
 export const FOOTER_LINKS = [
 
   {
-    title: "About",
+    title: 'About',
     links: [
       {
         id: 1,
-        sublink: "Our Story"
+        sublink: 'Our Story'
       },
       {
         id: 2,
-        sublink: "Factories"
+        sublink: 'Factories'
       },
       {
         id: 3,
-        sublink: "Contact us"
+        sublink: 'Contact us'
       },
       {
         id: 4,
-        sublink: "Help and Advices"
+        sublink: 'Help and Advices'
       },
       {
         id: 5,
-        sublink: "Refund Policy"
+        sublink: 'Refund Policy'
       },
 
     ]
   },
   {
-    title: "Information",
+    title: 'Information',
     links: [
       {
         id: 1,
-        sublink: "Delivery information"
+        sublink: 'Delivery information'
       },
       {
         id: 2,
-        sublink: "Privacy and policy"
+        sublink: 'Privacy and policy'
       },
       {
         id: 3,
-        sublink: "Terms of Use"
+        sublink: 'Terms of Use'
       },
 
     ]
   },
   {
 
-    title: "Category",
+    title: 'Category',
     links: [
       {
         id: 1,
-        sublink: "New Arrivals"
+        sublink: 'New Arrivals'
       },
       {
         id: 2,
-        sublink: "Men "
+        sublink: 'Men '
       },
       {
         id: 3,
-        sublink: "Women"
+        sublink: 'Women'
       },
       {
         id: 4,
-        sublink: "Shoes"
+        sublink: 'Shoes'
       },
       {
         id: 5,
-        sublink: "Luxury Attire"
+        sublink: 'Luxury Attire'
       },
       {
         id: 6,
-        sublink: "Kids"
+        sublink: 'Kids'
       },
       {
         id: 7,
-        sublink: "Accessories"
+        sublink: 'Accessories'
       },
 
     ]
   },
   {
-    title: "Contact Us",
+    title: 'Contact Us',
     links: [
       {
         id: 1,
-        sublink: "Dapperx@gmail.com"
+        sublink: 'Dapperx@gmail.com'
       },
       {
         id: 2,
-        sublink: "+91 9486512354"
+        sublink: '+91 9486512354'
       }
     ]
   }
@@ -393,35 +393,51 @@ export const SOCIAL_CONTACT_DETAILS = [
 export const GRID_IMAGES = [
   {
     id: 1,
-    bgimage: "/girl-jacket.jpg"
+    bgimage: '/girl-jacket.jpg'
   },
   {
     id: 2,
 
-    bgimage: "/accesserios-image.webp"
+    bgimage: '/accesserios-image.webp'
   },
   {
     id: 3,
 
-    bgimage: "/mens-shoes.jpg"
+    bgimage: '/mens-shoes.jpg'
   },
   {
     id: 4,
 
-    bgimage: "/girl-jacket.jpg"
+    bgimage: '/girl-jacket.jpg'
   },
   {
     id: 5,
 
-    bgimage: "/accesserios-image.webp"
+    bgimage: '/accesserios-image.webp'
   },
   {
     id: 6,
 
-    bgimage: "/mens-shoes.jpg"
+    bgimage: '/mens-shoes.jpg'
   },
   {
     id: 7,
-    bgimage: "/mens-shoes.jpg"
+    bgimage: '/mens-shoes.jpg'
   }
+]
+
+export const Fav_IMAGES = [
+  {
+    id: 1,
+    imgUrl: '/ajio.avif'
+  },
+  {
+    id: 2,
+    imgUrl: '/ajio1.png'
+  },
+  {
+    id: 3,
+    imgUrl: '/ajio2.png'
+  },
+
 ]

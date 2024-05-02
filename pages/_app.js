@@ -1,11 +1,13 @@
-import Navbar from "@/components/Navbar/Navbar";
-import "@/styles/globals.css";
-import Footer from "@/components/Footer";
-import Head from "next/head";
+import Head from 'next/head';
+import '@/styles/globals.css';
+
+import Navbar from '@/components/Navbar/Navbar';
+import Footer from '@/components/Footer';
+
 export default function App({ Component, pageProps }) {
-  return <div className="w-full">
+  return <div className='w-full'>
     <Head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit = cover" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, viewport-fit = cover' />
     <meta charset='utf-8' />
         <meta http-equiv='X-UA-Compatible' content='IE=edge' />
         <meta
