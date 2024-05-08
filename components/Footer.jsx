@@ -19,7 +19,7 @@ const Footer = () => (
           <Logo />
         </div>
 
-        <p className='text-lg flex justify-center items-center'>
+        <p className='text-lg flex text-center md:text-start'>
           Fashion: Where self expression meets creativity, embracing diversity
           and individuality.
         </p>
@@ -58,6 +58,8 @@ const Footer = () => (
 );
 
 export default Footer;
+
+
 
 
 

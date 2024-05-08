@@ -8,14 +8,14 @@ const ProductCard = ({ items }) => (
     {items.map((product) => (
       <div
         key={product.id}
-        className='bg-white gap-3 flex flex-col items-center  w-[220px] h-[220px]  shadow-lg shadow-gray-600'
+        className='bg-white gap-3 flex flex-col items-center p-2 w-[220px] h-[220px]  shadow-lg shadow-gray-600'
       >
         <Image
           src={product.imgUrl}
           alt='product'
-          width={180}
-          height={100}
-          className='flex w-auto h-auto aspect-square object-cover mt-4'
+          width={720}
+          height={1020}
+          className='w-auto h-auto'
         />
         <div className='flex flex-col w-full px-5'>
           <div className='flex flex-row items-center justify-between'>
@@ -23,7 +23,7 @@ const ProductCard = ({ items }) => (
               {product.BrandName}
             </h1>
             <div className=''>
-              <Heart />
+              <Heart size={13}/>
             </div>
           </div>
           <div>
@@ -47,6 +47,8 @@ const ProductCard = ({ items }) => (
 );
 
 export default ProductCard;
+
+
 
 
 

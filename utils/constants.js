@@ -202,6 +202,27 @@ export const SLIDER_CARD_DETAILS = [
     text: 'Premium Jacket',
     price: 1500,
     btnIcon: '+',
+  },
+  {
+    id: 4,
+    imageUrl: '/deals/combo-tshirt.avif',
+    text: 'Combo T-Shirt',
+    price: 750,
+    btnIcon: '+',
+  },
+  {
+    id: 5,
+    imageUrl: '/deals/girl-tshirt.avif',
+    text: 'Premium Tshirt',
+    price: 1000,
+    btnIcon: '+',
+  },
+  {
+    id: 6,
+    imageUrl: '/deals/jacket.avif',
+    text: 'Premium Jacket',
+    price: 1500,
+    btnIcon: '+',
   }
 ];
 
@@ -437,6 +458,18 @@ export const Fav_IMAGES = [
   },
   {
     id: 3,
+    imgUrl: '/ajio2.png'
+  },
+  {
+    id: 4,
+    imgUrl: '/ajio.avif'
+  },
+  {
+    id: 5,
+    imgUrl: '/ajio1.png'
+  },
+  {
+    id: 6,
     imgUrl: '/ajio2.png'
   },
 

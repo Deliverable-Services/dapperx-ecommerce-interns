@@ -1,35 +1,41 @@
 import Image from 'next/image';
-import Slider from 'react-slick';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation,Autoplay,FreeMode } from 'swiper/modules';
 
 import { Fav_IMAGES } from '@/utils/constants';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
-const FavCarousel = () => {
-  const settings = {
-    infinite: true,
-    slidesToShow: 1,
-    autoplay: true,
-    speed: 300,
-    rows: 1,
-    dots: true,
-  };
 
-  <div className='slider-container py-10'>
-    <Slider {...settings} className='relative'>
-      {Fav_IMAGES.map((item, index) => (
+const FavCarousel = () => (
+
+  <div className='py-10 w-full flex flex-row'>
+    <Swiper navigation={false}  modules={[Navigation,Autoplay,FreeMode]} 
+      slidesPerView={1}
+      autoplay={true}
+      pagination={{
+        clickable:true,
+      }}
+      freeMode={true}
+      className='mySwiper'
+      >
+      {Fav_IMAGES.map((item) => (
+         <SwiperSlide key={item.id} className=''>
+          
+
         <Image
           src={item.imgUrl}
           width={720}
           height={1020}
           alt=''
-          className='w-auto h-auto'
-          key={index}
-        />
+          className='w-full h-auto'
+          />
+          
+         
+
+        </SwiperSlide>
       ))}
-    </Slider>
-  </div>;
-};
+    </Swiper>
+  </div>
+);
 
 export default FavCarousel;
 

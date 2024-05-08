@@ -6,7 +6,7 @@ const ReviewCard = ({ items }) => (
   <div className='flex flex-col items-center justify-around bg-white py-10'>
     <p className='md:text-5xl text-xl  pb-14 font-bold'>
       {' '}
-      Don't just listen to us
+      Don&apos;t just listen to us
     </p>
     <div className='flex sm:flex-row flex-col items-center justify-center lg:gap-20 gap-5 md:px-14 px-8 pb-20'>
       {items.map((user) => (
@@ -37,6 +37,7 @@ const ReviewCard = ({ items }) => (
 );
 
 export default ReviewCard;
+
 
 
 

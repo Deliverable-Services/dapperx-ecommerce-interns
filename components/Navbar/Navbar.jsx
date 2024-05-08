@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -23,6 +23,10 @@ const Navbar = () => {
   const handleSidebarVisibility = () => {
     setIssidebarVisible(!isSidebarVisible);
   };
+
+  useEffect(() => {
+    document.body.style = isSidebarVisible ? 'overflow-y:hidden' : '';
+  }, [isSidebarVisible]);
 
   return (
     <div className=' w-screen'>
@@ -106,6 +110,13 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+
+
+
 
 
 

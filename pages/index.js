@@ -68,14 +68,14 @@ export default function Home() {
           <Carousel />
         </div>
 
-        <div className='w-full'>
+        <div className='w-full '>
           <SliderCard />
         </div>
 
-        <div className='w-full flex flex-col text-center md:gap-14 gap-7 md:py-16 py-8'>
+        <div className='w-full flex flex-col text-center md:gap-14 gap-7 md:py-16 py-8 items-center justify-center'>
           <p className='md:text-4xl text-lg font-bold'>LUXURY ATTIRE</p>
           <BlazerCarousel />
-          <button className='bg-black text-white bottom-3 left-10 w-[180px] '>View all products</button>
+          <button className='bg-black text-white bottom-3 left-10 w-[180px] h-8 flex text-center items-center justify-center '>View all products</button>
         </div>
 
         <div className='bg-slate w-full md:text-4xl text-xl flex md:flex-row md:gap-0 gap-3 flex-col py-6 items-center justify-evenly'>
@@ -98,7 +98,7 @@ export default function Home() {
         <div className='flex flex-col items-center justify-center md:py-14 py-7 md:gap-9 gap-4 w-full'>
           <p className='md:text-4xl text-xl font-bold '>SHE QUEEN ATTIRES</p>
 
-          <span className='md:text-lg text-sm px-4 md:px-0 flex items-center justify-center'>Elevate your alegance with our luxurious womens dresses, crafted for sophistiction and style.</span>
+          <span className='md:text-lg text-sm px-4 md:px-0 flex items-center justify-center text-center'>Elevate your alegance with our luxurious womens dresses, crafted for sophistiction and style.</span>
           <div className='flex flex-row w-full md:gap-10 gap-4 items-center justify-center md:px-20 px-3'>
             <Image src={'/queen-attire1.avif'} width={720} height={1020} alt='queen' className=' w-[33%] h-auto' />
             <Image src={'/queen-attire2.webp'} width={720} height={1020} alt='queen' className=' w-[33%] h-auto' />
@@ -112,15 +112,15 @@ export default function Home() {
           <FavCarousel />
         </div>
 
-        <div className='w-full flex md:flex-row flex-col-reverse items-center  md:px-10 px-2 py-10 '>
+        <div className='w-full flex md:flex-row flex-col-reverse items-center gap-10 md:gap-0  md:px-10 px-2 py-10 '>
           <div className='flex flex-col md:items-start items-center md:w-[60%]  gap-10 '>
 
             <div className='md:text-5xl text-2xl font-bold flex flex-col'>
               <h3 >WE THINK</h3>
-              <h2>YOU'LL <span className='text-xl'>LIKE THESE</span></h2>
+              <h2>YOU&apos;LL <span className='text-xl'>LIKE THESE</span></h2>
             </div>
 
-            <p className='p-6 '>Fashion is more than just clothing; it's an art form, a means of self-expression, and a reflection of culture and society. From haute couture runways to street style, fashion encompasses a wide spectrum of styles, trends, and influences.</p>
+            <p className='p-6 '>Fashion is more than just clothing; it&apos;s an art form, a means of self-expression, and a reflection of culture and society. From haute couture runways to street style, fashion encompasses a wide spectrum of styles, trends, and influences.</p>
 
             <div className='flex flex-row items-center justify-around w-full md:pr-10'>
               <div>
@@ -172,16 +172,16 @@ export default function Home() {
 
             <p className='flex text-lg font-bold items-baseline gap-2'>NEWS<span className='md:text-5xl text-3xl flex font-bold tracking-widest  items-end'>LETTER</span></p>
 
-            <div className='flex md:flex-row flex-col items-center justify-between px-2 my-10 w-[35%] h-[70px] md:bg-[#2B2B2B] text-xl'>
+            <div className='flex lg:flex-row flex-col items-center justify-between px-2 my-10 w-[35%] h-[70px] md:bg-[#2B2B2B] text-xl'>
               <input
                 type='email'
                 placeholder='Enter your Email'
                 required
                 id='email'
                 name='email'
-                className='md:bg-[#2B2B2B] md:text-white md:ml-5'
+                className='md:bg-[#2B2B2B] md:text-white text-center md:ml-5 border-2'
               />
-              <button className='md:bg-white bg-black md:text-black text-white  text-lg font-semibold md:w-[40%] w-full md:h-[80%]'>Subscribe</button>
+              <button className='lg:bg-white bg-black lg:text-black text-white text-center text-lg font-semibold lg:w-[40%] w-full lg:h-[80%]'>Subscribe</button>
             </div>
           </div>
         </div>

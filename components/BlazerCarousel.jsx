@@ -1,86 +1,73 @@
 import Image from 'next/image';
-import Marquee from 'react-fast-marquee';
-import Slider from 'react-slick';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, FreeMode, Navigation } from 'swiper/modules';
 
-import CarouselPrevArrow from './CarouselPrevArrow';
-import CarouselNextArrow from './CarouselNextArrow';
 
 import { BLAZER_IMAGES, FEATURED_PRODUCTS } from '@/utils/constants.js';
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
-const BlazerCarousel = () => {
-  const settings = {
-    centerMode: true,
-    infinite: true,
-    autoplay: true,
-    slidesToShow: 4,
-    speed: 1000,
-
-    rows: 1,
-    nextArrow: <CarouselNextArrow />,
-    prevArrow: <CarouselPrevArrow />,
-    responsive: [
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          // infinite: true,
+const BlazerCarousel = () =>(
+    <div className='w-full relative flex slider-container '>
+      <Swiper navigation={true} modules={[Navigation,Autoplay,FreeMode]} className="mySwiper"
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      loop={true}
+      freeMode={true}
+      breakpoints={{
+        480: {
+          slidesPerView: 2,
         },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+        650: {
+          slidesPerView: 3,
         },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
+        1024: {
+          slidesPerView: 4,  
         },
-      },
-    ],
-  };
-
-  return (
-    <div className='w-full relative slider-container'>
-      <Slider {...settings}>
+      }}>
         {BLAZER_IMAGES.map((item) => (
-          <div key={item.id} className='flex flex-col w-full'>
+          <SwiperSlide key={item.id}>
+          <div key={item.id} className='flex flex-row w-full justify-center'>
             <Image
               src={item.imageUrl}
-              width={1200}
-              height={1200}
+              width={720}
+              height={1020}
               alt='carousel'
-              className='w-auto h-auto'
+              className='w-auto h-auto '
             />
           </div>
+          </SwiperSlide>
         ))}
-      </Slider>
+      </Swiper>
 
-      <div className='absolute bottom-0'>
-        <Marquee className=' backdrop-blur-lg bottom-0' autoFill='true'>
-          {FEATURED_PRODUCTS.map((item, index) => (
+      <div className=' backdrop-blur-lg absolute z-10 bottom-0 w-full'>
+
+        <marquee>
+          <div className='flex flex-row w-full'>
+
+          {FEATURED_PRODUCTS.map((item) => (
             <div
-              key={index}
-              className=' flex sm:text-4xl text-xl px-3 py-6 gap-5 font-semibold  items-center justify-evenly'
+            key={item.id}
+            className=' flex flex-row w-full md:text-4xl text-xl px-3 py-6 gap-5 font-semibold  items-center justify-evenly'
             >
               <p>{item.title}</p>
               <span>{item.icon}</span>
             </div>
           ))}
-        </Marquee>
-      </div>
+          </div>
+        </marquee>
+          </div>
     </div>
   );
-};
+
 
 export default BlazerCarousel;
+
+
+
+
+
 
 
 

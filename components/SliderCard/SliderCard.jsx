@@ -1,92 +1,47 @@
-import { useState, useCallback } from 'react';
 import Image from 'next/image';
-import Slider from 'react-slick';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
+
+import 'swiper/css/pagination';
 
 import Rating from '../Rating';
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 import { SLIDER_CARD_DETAILS } from '@/utils/constants';
 
-const SliderCard = () => {
-  const [indexes, setIndexes] = useState({
-    previousIndex: -1,
-    currentIndex: 0,
-  });
 
-  function determineClasses(indexes, index) {
-    if (indexes.currentIndex === index) {
-      return 'active';
-    } else if (indexes.previousIndex === index) {
-      return 'prev';
-    }
-
-    return 'inactive';
-  }
-
-  const handleSlider = useCallback(() => {
-    if (indexes.currentIndex >= SLIDER_CARD_DETAILS.length - 1) {
-      setIndexes({
-        previousIndex: SLIDER_CARD_DETAILS.length - 1,
-        currentIndex: 0,
-      });
-    } else {
-      setIndexes((prevState) => ({
-        previousIndex: prevState.currentIndex,
-        currentIndex:
-          prevState.currentIndex + 1 !== SLIDER_CARD_DETAILS.length
-            ? prevState.currentIndex + 1
-            : 0,
-      }));
-    }
-  }, [indexes.currentIndex]);
-
-  const settings = {
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    initialSlide: 1,
-    speed: 3000,
-    rows: 1,
-    arrows: false,
-    dots: true,
-    afterChange: () => handleSlider(indexes),
-    responsive: [
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
-  return (
+const SliderCard = () =>  (
     <div className='bg-slate w-full flex flex-col items-center justify-center py-10 xl:px-44'>
       <p className='sm:text-4xl text-xl font-bold mb-10'>DEALS OF THE DAY</p>
       <div className='w-full'>
-        <Slider className='w-full' {...settings}>
+      <Swiper modules={[Pagination, Autoplay,FreeMode ]} className="mySwiper"
+      slidesPerView={'auto'}
+      spaceBetween={7}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      loop={true}
+      initialSlide={0}
+      pagination={{
+        clickable:true
+      }}
+      freeMode={true}
+      
+      centeredSlides ={true}
+      breakpoints={{
+        600: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      }}>
           {SLIDER_CARD_DETAILS.map((card, index) => (
+            <SwiperSlide key={index}>
+              {({ isActive }) => (
             <div
-              key={index}
-              className={`${determineClasses(indexes, index) === 'active' ? 'shadow-lg shadow-zinc-600' : 'scale-75'} flex flex-col bg-white  py-2 px-2 mx-10 my-5 max-h-[330px] max-w-[250px] `}
+              className={`${isActive ? 'shadow-lg shadow-zinc-600' : 'scale-75'} flex flex-col bg-white p-2 mx-auto my-10 max-h-[330px] max-w-[250px]`}
             >
               <Image
                 src={card.imageUrl}
@@ -113,14 +68,58 @@ const SliderCard = () => {
                 </div>
               </div>
             </div>
+              )}
+            </SwiperSlide>
           ))}
-        </Slider>
+        </Swiper>
       </div>
     </div>
   );
-};
-
 export default SliderCard;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
