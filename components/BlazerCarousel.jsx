@@ -7,7 +7,7 @@ import { BLAZER_IMAGES, FEATURED_PRODUCTS } from '@/utils/constants.js';
 
 
 const BlazerCarousel = () =>(
-    <div className='w-full relative flex slider-container '>
+    <div className='w-full relative flex'>
       <Swiper navigation={true} modules={[Navigation,Autoplay,FreeMode]} className="mySwiper"
       autoplay={{
         delay: 2500,
@@ -34,7 +34,7 @@ const BlazerCarousel = () =>(
               width={720}
               height={1020}
               alt='carousel'
-              className='w-auto h-auto '
+              className='w-auto h-auto aspect-square'
             />
           </div>
           </SwiperSlide>
@@ -45,11 +45,10 @@ const BlazerCarousel = () =>(
 
         <marquee>
           <div className='flex flex-row w-full'>
-
           {FEATURED_PRODUCTS.map((item) => (
             <div
             key={item.id}
-            className=' flex flex-row w-full md:text-4xl text-xl px-3 py-6 gap-5 font-semibold  items-center justify-evenly'
+            className=' flex flex-row w-full md:text-4xl text-xl px-3 lg:py-6 py-2 md:gap-5 gap-2 font-semibold  items-center justify-evenly'
             >
               <p>{item.title}</p>
               <span>{item.icon}</span>
@@ -57,7 +56,7 @@ const BlazerCarousel = () =>(
           ))}
           </div>
         </marquee>
-          </div>
+      </div>
     </div>
   );
 

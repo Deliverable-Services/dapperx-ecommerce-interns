@@ -1,17 +1,16 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation} from 'swiper/modules';
 import Image from 'next/image';
 
 import { PRODUCTS_CATEGORIES } from '@/utils/constants.js';
 
 const Carausel = () => (
     <div className='slider-container w-full'>
-      <Swiper navigation={true} modules={[Navigation,Pagination]} className="mySwiper"
+      <Swiper navigation={true} modules={[Navigation]} className="mySwiper"
       slidesPerView={'auto'}
-      spaceBetween={7}
-      pagination={{
-        clickable: true,
-      }}
+      spaceBetween={5}
+      centeredSlides={true}
+      loop={true}
       breakpoints={{
         480: {
           slidesPerView: 2,
@@ -35,10 +34,10 @@ const Carausel = () => (
                 width={1200}
                 height={1200}
                 alt='carousel'
-                className='md:w-[250px] md:h-[280px] w-[120px] h-[150px] '
+                className='md:w-[330px] md:h-[400px] w-[120px] h-[150px] '
               />
             </div>
-            <h2 className='md:text-xl text-md font-bold flex flex-row items-center justify-center my-8 '>
+            <h2 className='md:text-2xl text-md font-bold flex flex-row items-center justify-center my-8 '>
               {item.category}
             </h2>
           </div>

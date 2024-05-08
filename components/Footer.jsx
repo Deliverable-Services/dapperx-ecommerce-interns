@@ -36,7 +36,7 @@ const Footer = () => (
             key={index}
             className='gap-3 flex flex-col items-center md:items-start'
           >
-            <p className='font-bold text-xl text-green-600'>{section.title}</p>
+            <p className='font-bold text-xl text-white'>{section.title}</p>
             {section.links.map((subSection) => (
               <div
                 key={subSection.id}

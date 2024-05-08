@@ -29,13 +29,13 @@ const Navbar = () => {
   }, [isSidebarVisible]);
 
   return (
-    <div className=' w-screen'>
-      <div className='flex flex-row items-center justify-between  md:mx-14 mx-7 pt-3'>
-        <div className='flex flex-row  gap-8 items-center justify-center font-bold'>
+    <div className='w-screen'>
+      <div className='flex flex-row items-center justify-between px-3 mx-14 pt-8 tracking-widest'>
+        <div className='flex flex-row  gap-10 items-center justify-center font-bold'>
           {!isSearchbarOpen ? (
             <div className='bg-black flex text-white rounded-full md:size-12 size-8 items-center justify-center text-xl '>
               <div onClick={handleSearch}>
-                <Search className='md:size-6 size-4' />
+                <Search className='size-4' />
               </div>
             </div>
           ) : (
@@ -50,7 +50,7 @@ const Navbar = () => {
             </div>
           )}
 
-          <div className='hidden lg:flex gap-8'>
+          <div className='hidden lg:flex gap-10'>
             <Link href={'/'}>HOME</Link>
             <Link href={'/collections'}>COLLECTIONS</Link>
             <Link href={'/deals'}>DEALS</Link>
@@ -60,15 +60,15 @@ const Navbar = () => {
           <Logo />
         </div>
 
-        <div className='flex flex-row gap-8 items-center justify-center font-semibold '>
-          <Link href={'/blogs'} className='lg:flex hidden'>
+        <div className='flex flex-row gap-12 items-center justify-center font-semibold '>
+          <Link href={'/blogs'} className='lg:flex hidden font-bold'>
             BLOGS
           </Link>
           <Link
             href={'/liked-products'}
             className='bg-black hidden lg:flex  text-white rounded-full size-12 items-center justify-center text-xl '
           >
-            <Heart />
+            <Heart className='size-5'/>
           </Link>
 
           <div className='relative hidden lg:flex h-[50px] w-[100px] items-center justify-center'>
@@ -91,7 +91,7 @@ const Navbar = () => {
             href={'/profile'}
             className='bg-black hidden lg:flex text-white rounded-full size-12 items-center justify-center text-xl '
           >
-            <CircleUserRound />
+            <CircleUserRound  className='size-5'/>
           </Link>
 
           <Menu

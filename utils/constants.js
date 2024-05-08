@@ -20,25 +20,25 @@ export const HERO_SECTION_PRODUCTS = [
 export const SERVICE_DETAILS = [
   {
     id: 1,
-    iconName: <Truck className='sm:size-12' />,
+    iconName: <Truck size={42} />,
     title: 'Free Shipping',
     details: 'Avove all Orders over ₹ 200'
   },
   {
     id: 2,
-    iconName: <Receipt className='sm:size-12' />,
+    iconName: <Receipt size={42} />,
     title: 'Money Guarantee',
     details: '30 Days For Exchange'
   },
   {
     id: 3,
-    iconName: <Headset className='sm:size-12' />,
+    iconName: <Headset size={42} />,
     title: 'Online Support',
     details: '24/7 customer Care'
   },
   {
     id: 4,
-    iconName: <WalletCards className='sm:size-12' />,
+    iconName: <WalletCards size={42} />,
     title: 'Flexible payment',
     details: 'Pay with multiple credit card'
   }
@@ -210,20 +210,6 @@ export const SLIDER_CARD_DETAILS = [
     price: 750,
     btnIcon: '+',
   },
-  {
-    id: 5,
-    imageUrl: '/deals/girl-tshirt.avif',
-    text: 'Premium Tshirt',
-    price: 1000,
-    btnIcon: '+',
-  },
-  {
-    id: 6,
-    imageUrl: '/deals/jacket.avif',
-    text: 'Premium Jacket',
-    price: 1500,
-    btnIcon: '+',
-  }
 ];
 
 export const BLAZER_IMAGES = [
