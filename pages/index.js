@@ -120,7 +120,7 @@ export default function Home() {
               <h2>YOU&apos;LL <span className='text-xl'>LIKE THESE</span></h2>
             </div>
 
-            <p className='p-6 '>Fashion is more than just clothing; it&apos;s an art form, a means of self-expression, and a reflection of culture and society. From haute couture runways to street style, fashion encompasses a wide spectrum of styles, trends, and influences.</p>
+            <p className='p-6 text-center md:text-left'>Fashion is more than just clothing; it&apos;s an art form, a means of self-expression, and a reflection of culture and society. From haute couture runways to street style, fashion encompasses a wide spectrum of styles, trends, and influences.</p>
 
             <div className='flex flex-row items-center justify-around w-full md:pr-10'>
               <div>
