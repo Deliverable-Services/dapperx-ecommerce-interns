@@ -2,8 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-*, *::after, *::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.mySwiper > .swiper-button-next,
+.mySwiper > .swiper-button-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 10;
+}
+.mySwiper .swiper-button-next:after,
+.mySwiper .swiper-button-prev:after {
+  font-size: 10px;
+  color: black;
+  font-weight: bolder;
+}
+
+.marquee-main > div {
+  animation: linear infinite;
+}
+
+.mySwiper > .swiper-pagination > .swiper-pagination-bullet-active {
+  display: inline-block;
+  flex-direction: row;
+  background-color: black;
+  scale: 2;
+}
+
+.mySwiper > .swiper-pagination-horizontal {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
