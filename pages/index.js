@@ -5,6 +5,7 @@ import ProductCard from '@/components/ProductCard';
 import { HERO_SECTION_PRODUCTS, SERVICE_DETAILS, MARQUEE_DETAILS, REVIEWS_SECTION_DETAILS, GRID_IMAGES } from '@/utils/constants.js'
 import Carousel from '@/components/Carousel';
 import GridImg from '@/components/GridImg';
+import Button from '@/components/Button/Button';
 import MarqueeSlider from '@/components/MarqueeSlider';
 import SliderCard from '@/components/SliderCard/SliderCard';
 import BlazerCarousel from '@/components/BlazerCarousel';
@@ -12,22 +13,21 @@ import FavCarousel from '@/components/FavCarousel';
 import ReviewCard from '@/components/ReviewCard';
 
 
-
-
 export default function Home() {
+
 
   return (
     <div className='w-full flex flex-col'>
       <div className='flex flex-col lg:flex-row justify-between items-center gap-6 mt-10 px-16 w-full'>
         <div className='flex flex-col gap-[70px] lg:w-[45%] w-full mt-6'>
-          <div className=' flex  md:text-7xl text-4xl flex-col gap-8 font-bold tracking-wide'>
+          <div className=' flex  md:text-7xl text-4xl flex-col md:gap-8 gap-2 font-bold tracking-wide'>
             <h2 >Your </h2>
             <p><span className='text-[#BA9B88] '>Ultimate </span>Fashion </p>
             <p >Destination</p>
           </div>
           <p className=' text-lg tracking-widest'>Discover the latest trends in fashion for men and kids.Explore our curated collection of clothing, shoes, and accessories that blend style and comfort seamlessly</p>
           <button className='text-white text-center bg-[#141311] w-[150px] h-[38px] mx-auto '>Start Exploring</button>
-          <div className='flex flex-col gap-5'>
+          <div className='flex flex-col gap-5 '>
             <h3 className='text-lg font-bold'>Recent Trends</h3>
 
             <ProductCard items={HERO_SECTION_PRODUCTS} />
@@ -76,7 +76,10 @@ export default function Home() {
         <div className='w-full flex flex-col text-center md:gap-14 gap-7 md:py-16 py-8 items-center justify-center'>
           <p className='md:text-4xl text-lg font-bold'>LUXURY ATTIRE</p>
           <BlazerCarousel />
-          <button className='bg-black text-white bottom-3 left-11 w-[180px] h-14 flex text-center items-center justify-center '>View all products</button>
+
+          <Button components='button'>
+            View All Products
+          </Button>
         </div>
 
         <div className='bg-slate w-full md:text-4xl text-xl flex md:flex-row md:gap-0 gap-3 flex-col py-6 items-center justify-evenly'>
@@ -106,7 +109,12 @@ export default function Home() {
             <Image src={'/queen-attire3.avif'} width={720} height={1020} alt='queen' className='w-[33%] h-auto' />
           </div>
 
-          <button className='bg-black text-white flex items-center justify-center text-xs md:text-md  sm:h-14 h-[30px] sm:w-[180px] w-[100px]'>View all products</button>
+
+          <Button components='button'>
+            View All Products
+          </Button>
+
+
         </div>
 
         <div className='w-full'>
@@ -179,20 +187,20 @@ export default function Home() {
         <ReviewCard items={REVIEWS_SECTION_DETAILS} />
 
         <div className='w-full bg-slate  '>
-          <div className='bg-white  m-8 flex md:flex-row flex-col items-center justify-evenly py-7 '>
+          <div className='bg-white  sm:m-8 flex xl:flex-row flex-col items-center justify-evenly py-7 '>
 
             <p className='flex text-lg font-bold items-baseline gap-2'>NEWS<span className='md:text-5xl text-3xl flex font-bold tracking-widest  items-end'>LETTER</span></p>
 
-            <div className='flex lg:flex-row flex-col items-center justify-between px-2 my-10 w-[35%] h-[70px] md:bg-[#2B2B2B] text-xl'>
+            <div className='flex flex-row items-center justify-between px-2 my-10   sm:h-[70px] h-[40px] bg-[#2B2B2B] md:text-xl text-sm'>
               <input
                 type='email'
                 placeholder='Enter your Email'
                 required
                 id='email'
                 name='email'
-                className='md:bg-[#2B2B2B] md:text-white text-center md:ml-5 '
+                className='bg-[#2B2B2B] text-white text-center md:ml-5 ml-0 '
               />
-              <button className='lg:bg-white bg-black lg:text-black text-white text-center text-lg font-semibold lg:w-[40%] w-full lg:h-[80%]'>Subscribe</button>
+              <button className=' bg-white text-black  text-center md:text-lg text-sm font-semibold w-full px-3 h-[80%]'>Subscribe</button>
             </div>
           </div>
         </div>

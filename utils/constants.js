@@ -1,4 +1,4 @@
-import { Truck, Receipt, Headset, WalletCards, Home, CircleUserRound, Rss, Handshake, BaggageClaim, ArrowUpNarrowWide, Heart, Dot, Instagram, Twitter, Linkedin, Facebook } from 'lucide-react';
+import { Truck, Receipt, Headset, WalletCards, Home, CircleUserRound, Rss, Handshake, BaggageClaim, ArrowUpNarrowWide, Heart, Dot } from 'lucide-react';
 
 export const HERO_SECTION_PRODUCTS = [
   {
@@ -381,19 +381,19 @@ export const FOOTER_LINKS = [
 export const SOCIAL_CONTACT_DETAILS = [
   {
     id: 1,
-    icon: <Facebook />,
+    icon: '/footer svgs/instagram.svg',
   },
   {
     id: 2,
-    icon: <Instagram />,
+    icon: '/footer svgs/facebook.svg',
   },
   {
     id: 3,
-    icon: <Linkedin />,
+    icon: '/footer svgs/twitter.svg',
   },
   {
     id: 4,
-    icon: <Twitter />,
+    icon: '/footer svgs/linkedin.svg',
   },
 ]
 

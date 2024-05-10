@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -7,48 +7,99 @@ import {
   Heart,
   CircleUserRound,
   BaggageClaim,
+  X
 } from 'lucide-react';
 
 import Sidebar from '../Sidebar/Sidebar';
 import Logo from '../Logo';
 
 const Navbar = () => {
+  const searchInputRef = useRef(null)
   const [isSearchbarOpen, setIsSearchbarOpen] = useState(false);
   const [isSidebarVisible, setIssidebarVisible] = useState(false);
 
-  const handleSearch = () => {
+  /**
+   * Autofocus the search input
+   * when it is toggled open
+   */
+  useEffect(()=>{
+    if(!isSearchbarOpen) return;
+
+    if(searchInputRef && searchInputRef.current) {
+      searchInputRef.current.focus()
+    }
+  },[isSearchbarOpen])
+
+
+  const handleToggleSearchVisibility = () => {
+    if(isSearchbarOpen) {
+      if(searchInputRef.current) {
+        searchInputRef.current.value = ''
+      }
+    }
+
     setIsSearchbarOpen(!isSearchbarOpen);
+
   };
 
   const handleSidebarVisibility = () => {
     setIssidebarVisible(!isSidebarVisible);
   };
 
+ 
+
+
+  const handleSearchBlur = () => {
+      if(searchInputRef?.current && searchInputRef.current.value) {
+        return
+      }
+
+      setIsSearchbarOpen(false);
+
+  }
+
+  const handleSearchFocus = () => {
+    setIsSearchbarOpen(true);
+  }
+  
+ /**
+  * We don't want vertical scroll
+  * when the sidebar is open on screen widths small than lg
+  */
   useEffect(() => {
     document.body.style = isSidebarVisible ? 'overflow-y:hidden' : '';
   }, [isSidebarVisible]);
 
+
   return (
-    <div className='w-screen'>
+    <div className='w-screen' >
       <div className='flex flex-row items-center justify-between px-3 mx-14 pt-8 tracking-widest'>
         <div className='flex flex-row  gap-10 items-center justify-center font-bold'>
-          {!isSearchbarOpen ? (
-            <div className='bg-black flex text-white rounded-full md:size-12 size-8 items-center justify-center text-xl '>
-              <div onClick={handleSearch}>
+     
+
+           <button className='bg-black flex text-white rounded-full md:size-12 size-8 items-center justify-center text-xl '  onClick={handleToggleSearchVisibility}>
+              <>
                 <Search className='size-4' />
-              </div>
-            </div>
-          ) : (
-            <div className=''>
+              </>
+            </button>
+          
+              <div className={`${isSearchbarOpen ? 'absolute  z-10 md:w-[600px] w-full left-1 p-14 ': 'hidden'}`} >
+              <div className='flex flex-row-reverse w-full items-center relative gap-2'>
               <input
-                type='text'
+              ref={searchInputRef}
+                type='text' 
                 placeholder='Type keywords to search products'
                 name='search'
                 id='search'
-                className=' w-[320px] h-[40px] border-2 fixed top-20  px-6'
-              />
+                className='search w-full md:h-12 h-8 border-2 px-6 rounded-md'
+                onBlur={handleSearchBlur}
+                onFocus={handleSearchFocus}
+                />
+              <button onClick={handleToggleSearchVisibility}  className='absolute right-3'>
+                <X size={20}/>
+              </button>
             </div>
-          )}
+            </div>
 
           <div className='hidden lg:flex gap-10'>
             <Link href={'/'}>HOME</Link>
@@ -101,6 +152,7 @@ const Navbar = () => {
 
           <Sidebar
             isSidebarVisible={isSidebarVisible}
+            setIssidebarVisible={setIssidebarVisible}
             handleSidebarVisibility={handleSidebarVisibility}
           />
         </div>

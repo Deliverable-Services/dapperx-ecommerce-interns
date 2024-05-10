@@ -8,11 +8,11 @@ const ReviewCard = ({ items }) => (
       {' '}
       Don&apos;t just listen to us
     </p>
-    <div className='flex sm:flex-row flex-col justify-evenly  lg:gap-20 gap-8 pb-20'>
+    <div className='flex sm:flex-row flex-col justify-evenly  lg:gap-20 gap-8 px-2 pb-20'>
       {items.map((user) => (
         <div
           key={user.id}
-          className={`${user.id === 2 ? 'shadow-2xl shadow-zinc-600' : ''} bg-slate flex flex-col py-10 items-center justify-evenly md:w-[25%] w-full h-[60%] gap-7 md:text-lg px-5 `}
+          className={`${user.id === 2 ? 'shadow-2xl shadow-zinc-600' : ''} bg-slate flex flex-col py-10 items-center justify-evenly md:w-[400] w-full min-h-[500px] gap-7 md:text-lg px-5 `}
         >
           <Image
             src={user.imgUrl}

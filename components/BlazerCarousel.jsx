@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, FreeMode, Navigation } from 'swiper/modules';
+import Marquee from 'react-fast-marquee';
+
 
 
 import { BLAZER_IMAGES, FEATURED_PRODUCTS } from '@/utils/constants.js';
@@ -43,8 +45,8 @@ const BlazerCarousel = () =>(
 
       <div className=' backdrop-blur-lg absolute z-10 bottom-0 w-full'>
 
-        <marquee>
-          <div className='flex flex-row w-full'>
+        <Marquee className=' w-full flex flex-row gap-10' autoFill={true}>
+
           {FEATURED_PRODUCTS.map((item) => (
             <div
             key={item.id}
@@ -54,8 +56,9 @@ const BlazerCarousel = () =>(
               <span>{item.icon}</span>
             </div>
           ))}
-          </div>
-        </marquee>
+        
+    
+        </Marquee>
       </div>
     </div>
   );
