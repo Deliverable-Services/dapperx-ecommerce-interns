@@ -29,11 +29,13 @@ const Summary = () => {
             -
         </span>
       </p> 
-      <p className='border-y-2 border-gray-700 p-2 font-bold my-3'>Totoal</p>
+      <p className='border-y-2 border-gray-300 p-2 font-bold my-3 flex justify-between'>
+        <span>Total</span><span>₹50.00</span>
+      </p>
       <div className='mx-12 w-[300px]'>
-        <button className='bg-black text-white text-[22px] flex justify-center items-center w-full'>CHECKOUT</button>
-        <button className='bg-gray-300 flex justify-center text-[20px] my-2 items-center w-full'><Image src={'/mastercard-svgrepo-com.svg'} height={30} width={300} alt='pic' className='h-6 w-6'/>MASTERCARD</button>
-        <button className='bg-gray-300 h-8 flex justify-center text-[20px] my-2 items-center w-full'><Image src={'/visa-svgrepo-com.svg'} height={30} width={300} alt='pic' className='h-8 w-8'/></button>
+        <button className='bg-black text-white text-[16px] flex justify-center items-center w-full h-10'>CHECKOUT</button>
+        <button className='bg-gray-300 h-10 flex justify-center text-[20px] my-2 items-center w-full'><Image src={'/mastercard-svgrepo-com.svg'} height={30} width={300} alt='pic' className='h-6 w-6 mr-2'/>MASTERCARD</button>
+        <button className='bg-gray-300 h-10 flex justify-center text-[20px] my-2 items-center w-full'><Image src={'/visa-svgrepo-com.svg'} height={30} width={300} alt='pic' className='h-8 w-8'/></button>
         <Image className='w-[300px] h-[360px] pt-6' src={'/watch.jpg'} alt='pic' height={30} width={30 }/>
       </div>
     </div>

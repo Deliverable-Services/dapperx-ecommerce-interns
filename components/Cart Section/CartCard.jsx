@@ -7,9 +7,9 @@ import { FaRegHeart } from "react-icons/fa";
 const CartCard = () => {
   return (
     <div>
-      <div className='flex border-b-2 border-black pb-8'>
+      <div className='flex border-b-2 border-gray-400 pb-8'>
         <div>
-          <Image className='h-[264px] w-[200px] rounded-sm' src={'/cloth.jpg'} alt='pic' height={300} width={300}/>
+          <Image className='h-[264px] w-[240px] rounded-sm' src={'/cloth.jpg'} alt='pic' height={300} width={300}/>
         </div>
         <div className='mx-4'>
           <span className='font-bold'>Full sleeve zipper</span>

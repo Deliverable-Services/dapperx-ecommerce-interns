@@ -1,25 +1,33 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import Rating from '../Rating'
 import { FaRegHeart } from "react-icons/fa";
-
+import { ImageData } from '@/utils/constants';
 const ItemDesc = () => {
+  const[imageUrl,setImageUrl]=useState('/model.avif')
+  const[activeId,setActiveId]=useState(0);
   return (
     <div className='flex px-4 flex-col sm:flex sm:flex-row'>
       <div className='w-full overflow-hidden sm:w-1/5 flex justify-center sm:flex sm:flex-col '>
-        <Image className='h-[108px] w-[120px] mx-2' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
-        <Image className='h-[108px] w-[120px] mx-2 sm:my-[14px]' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
-        <Image className='h-[108px] w-[120px] mx-2 sm:my-[14px]' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
-        <Image className='h-[108px] w-[120px] mx-2' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
+        {/* <Image className='h-[108px] w-[76px] sm:w-[120px] mx-2' src={'/model.avif'} onClick={()=>{setImageUrl('/model.avif')}} alt='t-shirt' height={300} width={300}/>
+        <Image className='h-[108px] w-[76px] sm:w-[120px] mx-2 sm:my-[14px]' src={'/btshirt.jpg'} onClick={()=>{setImageUrl('/btshirt.jpg')}} alt='t-shirt' height={300} width={300}/>
+        <Image className='h-[108px] w-[76px] sm:w-[120px] mx-2 sm:my-[14px]' src={'/vertical.avif'} onClick={()=>{setImageUrl('/vertical.avif')}} alt='t-shirt' height={300} width={300}/>
+        <Image className='h-[108px] w-[76px] sm:w-[120px] mx-2' src={'/shirtb.jpg'} onClick={()=>{setImageUrl('/shirtb.jpg')}} alt='t-shirt' height={300} width={300}/> */}
+        {ImageData.map((data,index)=>(
+          <Image key={data?.id} className={activeId===index ?'h-[100px] w-[76px] sm:w-[120px] mx-2 sm:my-[14px] border-2 border-yellow-300':'h-[100px] w-[76px] sm:w-[120px] mx-2 sm:my-[14px] '} src={`${data?.url}`} onClick={()=>{
+            setImageUrl(data?.url)
+            setActiveId(data?.id-1)
+          }} alt='t-shirt' height={300} width={300}/>
+        ))}
       </div>
       <div className='w-full p-2.5 sm:p-0 sm:w-2/5 sm:items-center sm:flex sm:justify-center sm:-ml-24'>
-        <Image className='w-full h-[488px]' src={'/model.avif'} alt='t-shirt' height={300} width={300}/>
+        <Image className='w-full h-[488px]' src={`${imageUrl}`} alt='t-shirt' height={300} width={300}/>
       </div>
     <div className='w-full sm:w-2/5 h-full px-6'>
         <div className='w-full flex justify-between'>
             <div><span className='font-semibold text-[22px]'>Mens t-shirt</span></div>
             <div>
-                <span className='font-semibold text-gray-500'><s>₹ 3500</s></span>
+                <span className='font-semibold text-gray-500'><s>₹3500</s></span>
                 <span className='font-semibold'>{' '}₹2000</span>
             </div>
         </div>

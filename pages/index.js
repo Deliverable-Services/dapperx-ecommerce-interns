@@ -144,9 +144,7 @@ export default function Home() {
         </div>
       {/* section 3 */}
       <ProductPage/>
-      {/* section 4 */}
-      <ProductDesc/>
-      <Cart/>    
+      {/* section 4 */}    
     </div>
   );
 }

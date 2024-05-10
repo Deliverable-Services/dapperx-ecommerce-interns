@@ -21,14 +21,30 @@ import TotalRating from './Products/TotalRating';
 const ProductPage = () => {
   const[isFilter,setIsFilter]=useState(false);
   const[size,setSize]=useState([10,78]);
+  const[isCard,setIsCard]=useState(false);
+
+  const handleCard = () =>{
+    setIsCard(!isCard)
+  }
 
   const handlFilter = () =>{
-    setIsFilter(!isFilter)
+    setIsFilter(true)
   }
+
+  const handleResize = () => {
+    // Check for small screen based on a suitable breakpoint (e.g., 768px)
+    if (window.innerWidth <= 768) {
+      setIsFilter(true); // Show filter on small screens
+    } else {
+      setIsFilter(false); // Hide filter on large screens
+    }
+  };
 
   //let length=window.innerWidth
   useEffect(()=>{
-    window.addEventListener('resize',()=>{{window.innerWidth<500 && setIsFilter(false) }})
+    window.addEventListener('resize',handleResize)
+    handleResize();
+    return () => window.removeEventListener('resize', handleResize);
     console.log(isFilter)
   },[isFilter])
    const handleSizeChange = (newValue) => {
@@ -39,12 +55,22 @@ const ProductPage = () => {
   return (
     <div className='overflow-hidden bg-white'>
       <div className= {isFilter ? 'flex px-8 pt-3 sm:px-3 justify-between p-4' : 'flex justify-between pl-6 mr-9 pt-2'}>
-        <span className='font-bold sm:hidden' onClick={handlFilter}>Filter</span>
-        <span className='font-semibold hidden sm:block text-[24px]'>Filters</span>
-        {isFilter ? <IoMdCloseCircleOutline onClick={handlFilter} /> : <span className='font-bold sm:mr-4'>
-          <div className='flex items-center text-gray-600 font-semibold'>Sort by: <span className='font-bold text-black px-2'>
-            Featured </span><IoIosArrowDown className='mx-2'/></div>
-          </span> } 
+        {isFilter ?
+          <div className='flex justify-between w-full'>
+          {isCard ? null : <span className='font-bold'onClick={handleCard} >Filter</span>}
+          <span>
+          {isCard ? <IoMdCloseCircleOutline onClick={handleCard} className='-ml-4'/> : null} 
+          </span>
+        </div>
+        : <div className='flex justify-between w-full'>
+          <span className='text-[24px] font-semibold'>
+            Filter
+          </span>
+          <span className='flex items-center font-semibold text-gray-600 mr-5'>
+            Sort by: <span className='font-bold text-black px-2'>
+            Featured </span><IoIosArrowDown className='mx-2'/>
+          </span>
+        </div> }
       </div>
       <div className='flex gap-5'>
          <div className='sm:w-1/4 hidden sm:block  pl-6 w-full p-4'>
@@ -118,9 +144,9 @@ const ProductPage = () => {
             <TotalRating/>
           </Accordion>
         </div>
-        {isFilter ? (<FilterSection/>) :
+        {isCard? (<FilterSection/>) :
         (<div 
-          className= 'grid grid-cols-2 sm:grid sm:grid-cols-3 w-full p-4 -mr-4'>
+          className= 'grid grid-cols-2 sm:grid sm:grid-cols-3 w-full px-4 sm:p-4 -mr-4'>
           <ClothCard/>
           <ClothCard/>
           <ClothCard/>

@@ -337,3 +337,22 @@ export const SERVICE_DETAILS = [
       tag:'Jerkin',
     },
   ]
+
+  export const ImageData = [
+    {
+      id:1,
+      url:'/model.avif',
+    },
+    {
+      id:2,
+      url:'/btshirt.jpg'
+    },
+    {
+      id:3,
+      url:'/vertical.avif'
+    },
+    {
+      id:4,
+      url:'/shirtb.jpg'
+    }
+  ]
