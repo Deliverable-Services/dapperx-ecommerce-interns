@@ -6,7 +6,10 @@ import { Dot } from "lucide-react";
 import Rating from "@/components/Rating";
 import Carousel from "@/components/Carousel";
 import { useState } from "react";
-
+import ProductPage from "@/components/ProductPage";
+import ProductDesc from "@/components/Product Description/ProductDesc";
+import Summary from "@/components/Cart Section/Summary";
+import Cart from "@/components/Cart Section/Cart";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -140,14 +143,10 @@ export default function Home() {
             </div> */}
         </div>
       {/* section 3 */}
-        <div>
-
-        </div>
+      <ProductPage/>
       {/* section 4 */}
-        <div>
-
-        </div>
-    
+      <ProductDesc/>
+      <Cart/>    
     </div>
   );
 }
