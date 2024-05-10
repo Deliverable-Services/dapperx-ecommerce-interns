@@ -15,6 +15,8 @@ import Rating from './Rating';
 import MobileFilter from './Products/MobileFilter';
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import FilterSection from './Products/FilterSection';
+import Accordion from './Products/Accordion';
+import TotalRating from './Products/TotalRating';
 
 const ProductPage = () => {
   const[isFilter,setIsFilter]=useState(false);
@@ -54,11 +56,7 @@ const ProductPage = () => {
               ))}
             </span>
           </div>
-          <div className='border-b-2 border-gray-400 pb-4'>
-            <div className='flex justify-between items-center mt-4'>
-            <span className='font-semibold text-[17px]'>Availability</span>
-            <IoIosArrowDown/>
-            </div>
+          <Accordion title={'Availability'}>
             <div className='mt-2'>
               <div className='py-[2px] flex items-center'>
                 <input type='checkbox'style={{height:'15px', width:'15px'}}/>
@@ -69,35 +67,23 @@ const ProductPage = () => {
                 <span className='pl-2 font-medium'>In stock(20)</span>
               </div>
             </div>
-          </div>
-          <div className='border-b-2 border-gray-400 pb-4 mt-4'>
-            <div className='flex justify-between items-center'>
-              <span className='font-semibold text-[17px] mb-1'>Category</span>
-              <IoIosArrowDown/>
-            </div>
+          </Accordion>
+          <Accordion title={'Category'}>
             <div className='mt-2'>
               {CategoriesData.map((item)=>(
                 // <div key={item.id}>{item.category}</div>
                 <CheckBox key={item.id} name={item.category}/>
               ))}
             </div>
-          </div>
-          <div className='border-b-2 border-gray-400 pb-4 mt-4'>
-            <div className='flex justify-between items-center'>
-              <span className='font-semibold text-[17px]'>Colors</span>
-              <IoIosArrowDown/>
-            </div>
+          </Accordion>
+          <Accordion title={'Colors'}>
             <div className='flex flex-wrap mt-2'>
               {colorData.map((data)=>(
                 <ClothColor key={data.id} color={data.colour}/>
               ))}
             </div>
-          </div>
-          <div className='border-b-2 border-gray-400 pb-4 mt-4'>
-            <div className='flex justify-between items-center'>
-                <span className='font-semibold text-[17px]'>Price range</span>
-                <IoIosArrowDown/>
-            </div>
+          </Accordion>
+          <Accordion title={'Price range'}>
             <div className='mt-4'>
               <PriceSelector 
                 min={0}
@@ -109,125 +95,28 @@ const ProductPage = () => {
             <div className='my-2 mt-4'>
               <button className='w-full bg-black text-white text-[16px] items-center py-1'>Apply</button>
             </div>
-          </div>
-          <div className='border-b-2 border-gray-400 pb-4 mt-4'>
-            <div className='flex justify-between items-center'>
-              <span className='font-semibold text-[17px]'>Collections</span>
-              <IoIosArrowDown/>
-            </div>
+          </Accordion>
+          <Accordion title={'Collections'}>
             <div className='mt-2'>
               {CollectionData.map((data)=>(
                 <CheckBox key={data.id} name={data.col}/>
               ))}
             </div>
-          </div>
-          <div className='border-b-2 border-gray-400 pb-4  mt-4'>
-            <div className='flex justify-between items-center'>
-              <span className='font-bold text-[17px]'>Tags</span>
-              <IoIosArrowDown/>
-            </div>
+          </Accordion>
+          <Accordion title={'Tags'}>
             <div className='mt-2'>
               {tagData.map((data)=>(
                 <CheckBox key={data.id} name={data.tag}/>
               ))}
             </div>
-          </div>
-          <div className='border-b-2 border-gray-400 pb-4 mt-4'>
-            <div className='flex justify-between items-center'>
-              <span className='font-bold text-[17px]'>Ratings</span>
-              <IoIosArrowDown/>
-            </div>
-              <div className='flex items-center mt-2'>
-                <input type='checkbox' className='mr-2' style={{height:'15px', width:'15px'}}/>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-              </div>
-              <div className='flex items-center mt-2'>
-                <input type='checkbox' className='mr-2' style={{height:'15px', width:'15px'}}/>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-              </div>
-              <div className='flex items-center mt-2'>
-                <input type='checkbox' className='mr-2' style={{height:'15px', width:'15px'}}/>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-              </div>
-              <div className='flex items-center mt-2'>
-                <input type='checkbox' className='mr-2' style={{height:'15px', width:'15px'}}/>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-              </div>
-              <div className='flex items-center mt-2'>
-                <input type='checkbox' className='mr-2' style={{height:'15px', width:'15px'}}/>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-                <span className='fill-yellow-500'>
-                <Rating/>
-                </span>
-              </div>
-          </div>
+          </Accordion>
+          <Accordion title={'Ratings'}>
+            <TotalRating/>
+            <TotalRating/>
+            <TotalRating/>
+            <TotalRating/>
+            <TotalRating/>
+          </Accordion>
         </div>
         {isFilter ? (<FilterSection/>) :
         (<div 

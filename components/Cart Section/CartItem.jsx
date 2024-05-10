@@ -11,7 +11,7 @@ const CartItem = () => {
                 <p className='text-gray-600 font-normal'>Log in and Use Code DAPPERXUS</p>
             </div>
             <div>
-                <input type="radio" style={{height:'20px', width:'20px'}}/>
+                <input type="radio" style={{height:'20px', width:'20px', accentColor:'black'}}/>
             </div>
         </div>
         <div className='flex justify-between items-center bg-gray-300 px-2 | sm:px-8 sm:py-4 my-4'>
@@ -20,7 +20,7 @@ const CartItem = () => {
                 <p className='text-gray-600 font-normal'>Exclusive offers for the members<span className='hidden sm:inline'>: Enjoy free shipping on every order</span></p>
             </div>
             <div>
-                <input type="radio" style={{height:'20px', width:'20px'}}/>
+                <input type="radio" style={{height:'20px', width:'20px', accentColor:'black'}}/>
             </div>
         </div>
       </div>
