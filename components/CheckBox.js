@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 const CheckBox = ({name}) => {
     
   return (
-    <div>
-      <input type='checkbox'/> 
-      <span className='pl-2'>{name}</span>
+    <div className='flex items-center'>
+      <input type='checkbox' style={{height:'15px', width:'15px'}}/> 
+      <span className='pl-2 font-semibold text-[15px]'>{name}</span>
     </div>
   )
 }

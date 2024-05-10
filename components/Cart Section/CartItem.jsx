@@ -5,22 +5,22 @@ const CartItem = () => {
     <div className='px-4'>
         {/* uppee*/}
       <div>
-        <div className='flex justify-between items-center bg-gray-300 px-2 | sm:px-4 sm:py-2'>
+        <div className='flex justify-between items-center bg-gray-300 px-2 | sm:px-8 sm:py-4'>
             <div className='font-medium text-[18px]'>
-                <p>35% off on Selected Styles</p>
-                <p>Log in and Use Code DAPPERXUS</p>
+                <p className='font-semibold'>35% off on Selected Styles</p>
+                <p className='text-gray-600 font-normal'>Log in and Use Code DAPPERXUS</p>
             </div>
             <div>
-                <input type="radio"/>
+                <input type="radio" style={{height:'20px', width:'20px'}}/>
             </div>
         </div>
-        <div className='flex justify-between items-center bg-gray-300 px-2 | sm:px-4 sm:py-2 my-4'>
+        <div className='flex justify-between items-center bg-gray-300 px-2 | sm:px-8 sm:py-4 my-4'>
             <div className='font-medium text-[18px]'>
-                <p>Free Shipping for the Members</p>
-                <p>Exclusive offers for the members<span className='hidden sm:inline'>: Enjoy free shipping on every order</span></p>
+                <p className='font-semibold'>Free Shipping for the Members</p>
+                <p className='text-gray-600 font-normal'>Exclusive offers for the members<span className='hidden sm:inline'>: Enjoy free shipping on every order</span></p>
             </div>
             <div>
-                <input type="radio"/>
+                <input type="radio" style={{height:'20px', width:'20px'}}/>
             </div>
         </div>
       </div>
