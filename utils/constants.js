@@ -107,34 +107,46 @@ export const PRODUCTS_CATEGORIES = [
     id: 6,
     imageUrl: '/carousel/mens-carousel.avif',
     category: 'Men',
-  }
+  },
+  {
+    id: 7,
+    imageUrl: '/carousel/shirt-carousel.avif',
+    category: 'Active',
+  },
+  {
+    id: 8,
+    imageUrl: '/carousel/women-carousel.avif',
+    category: 'Women',
+  },
 ];
 
 
 export const SIDEBAR_LINKS = [
   {
     id: 1,
-    title: 'Home',
-    icon: <Home className='size-4' />,
-    path: '/',
-  },
-  {
-    id: 2,
     title: 'My Profile',
     icon: <CircleUserRound className='size-4' />,
     path: '/profile',
   },
+
+
   {
-    id: 3,
+    id: 2,
     title: 'Cart',
     icon: <BaggageClaim className='size-4' />,
     path: '/cart',
   },
   {
-    id: 4,
-    title: 'My Wishlish',
+    id: 3,
+    title: 'Wishlish',
     icon: <Heart className='size-4' />,
     path: '/liked-products',
+  },
+  {
+    id: 4,
+    title: 'Home',
+    icon: <Home className='size-4' />,
+    path: '/',
   },
   {
     id: 5,
@@ -210,6 +222,7 @@ export const SLIDER_CARD_DETAILS = [
     price: 750,
     btnIcon: '+',
   },
+
 ];
 
 export const BLAZER_IMAGES = [
@@ -240,7 +253,8 @@ export const BLAZER_IMAGES = [
   {
     id: 7,
     imageUrl: '/carousel/coat2.avif',
-  }
+  },
+
 ]
 export const FEATURED_PRODUCTS = [
   {

@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{html,js,ts,jsx,tsx}',
+    './components/**/*.{html,js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -14,5 +14,8 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [{
+    'postcss-import': {},
+    tailwindcss: {},
+  }],
 };
