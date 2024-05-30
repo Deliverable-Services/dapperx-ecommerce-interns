@@ -26,7 +26,13 @@ const Footer = () => (
         <div className='flex flex-row items-center gap-5'>
           {SOCIAL_CONTACT_DETAILS.map((profile, index) => (
             <div key={index}>
-              <Image src={profile.icon} width={720} height={1020} alt='' className='w-6 h-6'/>
+              <Image
+                src={profile.icon}
+                width={720}
+                height={1020}
+                alt=''
+                className='w-6 h-6'
+              />
             </div>
           ))}
         </div>
@@ -34,10 +40,7 @@ const Footer = () => (
 
       <div className='flex md:flex-row flex-col md:w-[70%] w-full  justify-around items-start md:gap-0 gap-10'>
         {FOOTER_LINKS.map((section, index) => (
-          <div
-            key={index}
-            className='gap-3 flex flex-col items-start'
-          >
+          <div key={index} className='gap-3 flex flex-col items-start'>
             <p className='font-bold text-xl text-white'>{section.title}</p>
             {section.links.map((subSection) => (
               <div
@@ -60,9 +63,3 @@ const Footer = () => (
 );
 
 export default Footer;
-
-
-
-
-
-
