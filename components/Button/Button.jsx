@@ -1,26 +1,14 @@
-
-
-import styles from './Button.module.css'
+import styles from './Button.module.css';
 
 const styleMapped = {
-    viewProducts : styles.viewProduct,
-}
+  primary: styles.primary,
+};
 
-const Typography = ({children,
-  components='button'
+const Button = ({ children, component = 'button' }) => {
+  const Wrapper = component;
+  const variant = styleMapped.primary;
 
-}) => {
+  return <Wrapper className={variant.split().join(' ')}>{children}</Wrapper>;
+};
 
- 
-  const Wrapper = components;
-  const varient = styleMapped.viewProducts
-
-  return (
-    <Wrapper className={[varient].join(' ')}>
-        {children}
-    </Wrapper>
-  )
-}
-
-
-export default Typography
+export default Button;
