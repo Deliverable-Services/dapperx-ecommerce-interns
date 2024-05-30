@@ -23,7 +23,7 @@ const ProductCard = ({ items }) => (
               {product.BrandName}
             </h1>
             <div className=''>
-              <Heart size={13}/>
+              <Heart size={13} />
             </div>
           </div>
           <div>
@@ -47,12 +47,3 @@ const ProductCard = ({ items }) => (
 );
 
 export default ProductCard;
-
-
-
-
-
-
-
-
-

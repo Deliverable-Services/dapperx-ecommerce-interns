@@ -12,7 +12,9 @@ const ReviewCard = ({ items }) => (
       {items.map((user) => (
         <div
           key={user.id}
-          className={`${user.id === 2 ? 'shadow-2xl shadow-zinc-600' : ''} bg-slate flex flex-col py-10 items-center justify-evenly md:w-[400] w-full min-h-[500px] gap-7 md:text-lg px-5 `}
+          className={`${
+            user.id === 2 ? 'shadow-2xl shadow-zinc-600' : ''
+          } bg-slate flex flex-col py-10 items-center justify-evenly md:w-[400] w-full min-h-[500px] gap-7 md:text-lg px-5 `}
         >
           <Image
             src={user.imgUrl}
@@ -37,13 +39,3 @@ const ReviewCard = ({ items }) => (
 );
 
 export default ReviewCard;
-
-
-
-
-
-
-
-
-
-
